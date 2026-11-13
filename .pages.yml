@@ -16,13 +16,26 @@ content:
         label: প্রধান প্রতিবেদনের শিরোনাম
         type: string
       - name: featuredReporter
-        label: প্রধান ভিডিওর ডেস্ক / প্রতিবেদকের নাম
+        label: প্রধান ভিডিওর প্রতিবেদকের নাম
         type: string
       - name: leadSummary
         label: প্রধান প্রতিবেদনের সারসংক্ষেপ
         type: text
+      - name: socialLinks
+        label: সোশ্যাল মিডিয়া লিংক (YouTube, Facebook, LinkedIn)
+        type: object
+        fields:
+          - name: youtube
+            label: YouTube চ্যানেল লিংক
+            type: string
+          - name: facebook
+            label: Facebook পেজ লিংক
+            type: string
+          - name: linkedin
+            label: LinkedIn পেজ লিংক
+            type: string
       - name: exclusiveVideos
-        label: এক্সক্লুসিভ ভিডিও গ্যালারি (Exclusive Videos)
+        label: এক্সক্লুসিভ ভিডিও গ্যালারি (সর্বশেষ ৩টি দেখাবে)
         type: object
         list: true
         fields:
@@ -35,10 +48,10 @@ content:
             type: string
             required: true
           - name: date
-            label: প্রকাশের তারিখ
+            label: তারিখ
             type: string
           - name: desk
-            label: ডেস্ক / প্রতিবেদক
+            label: প্রতিবেদকের নাম
             type: string
       - name: ads
         label: বিজ্ঞাপন ম্যানেজমেন্ট (Ad Slots)
@@ -52,7 +65,7 @@ content:
                 label: বিজ্ঞাপন চালু করুন
                 type: boolean
               - name: text
-                label: বিকল্প বিজ্ঞাপনের লেখা (ছবি না থাকলে দেখাবে)
+                label: বিকল্প বিজ্ঞাপনের লেখা
                 type: string
               - name: image
                 label: ব্যানার ছবি
@@ -68,7 +81,7 @@ content:
                 label: বিজ্ঞাপন চালু করুন
                 type: boolean
               - name: text
-                label: বিকল্প বিজ্ঞাপনের লেখা (ছবি না থাকলে দেখাবে)
+                label: বিকল্প বিজ্ঞাপনের লেখা
                 type: string
               - name: image
                 label: ব্যানার ছবি
@@ -84,7 +97,7 @@ content:
                 label: বিজ্ঞাপন চালু করুন
                 type: boolean
               - name: text
-                label: বিকল্প বিজ্ঞাপনের লেখা (ছবি না থাকলে দেখাবে)
+                label: বিকল্প বিজ্ঞাপনের লেখা
                 type: string
               - name: image
                 label: ব্যানার ছবি
@@ -93,43 +106,24 @@ content:
                 label: বিজ্ঞাপনের লিংক
                 type: string
       - name: articles
-        label: সকল সংবাদ ও নোটিশ (Articles)
+        label: সকল সংবাদ (Articles)
         type: object
         list: true
         fields:
           - name: title
-            label: সংবাদের শিরোনাম
+            label: খবরের শিরোনাম
             type: string
             required: true
-          - name: cat
-            label: ক্যাটাগরি কোড
-            type: select
-            options:
-              values:
-                - Notices
-                - Training
-                - Job Placement
-                - Campus Politics
-                - Tech & Research
-          - name: catBn
-            label: বাংলা বিভাগের নাম
-            type: string
-          - name: date
-            label: তারিখ
-            type: string
           - name: reporter
             label: প্রতিবেদকের নাম
             type: string
           - name: image
-            label: সংবাদের ছবি
+            label: ছবি যুক্ত করুন
             type: image
-          - name: summary
-            label: সংক্ষিপ্ত বিবরণ
+          - name: details
+            label: মূল খবর
             type: text
             required: true
-          - name: details
-            label: বিস্তারিত সংবাদ
-            type: text
           - name: link
-            label: অফিশিয়াল লিংক / PDF
+            label: মূল লিংক বা পিডিএফ যুক্ত করুন
             type: string
