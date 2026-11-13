@@ -14,8 +14,8 @@
       "link": "https://www.canva.com/"
     },
     "midBanner": {
-      "active": false,
-      "text": "কারিগরি শিক্ষার্থী ও প্রকৌশলীদের কাছে আপনার ব্র্যান্ড পৌঁছে দিন — বিজ্ঞাপনের জন্য ক্লিক করুন",
+      "active": true,
+      "image": "/images/Untitled design-1.png",
       "link": "#submit-news"
     }
   },
