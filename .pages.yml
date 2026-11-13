@@ -90,7 +90,7 @@ content:
                 - Campus Politics
                 - Tech & Research
           - name: catBn
-            label: বাংলা বিভাগের নাম
+            label: বাংলা বিভাগের নাম 
             type: string
           - name: date
             label: তারিখ
