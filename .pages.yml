@@ -10,7 +10,7 @@ content:
     format: json
     fields:
       - name: featuredVideoId
-        label: প্রধান ইউটিউব ভিডিও আইডি (YouTube Video ID)
+        label: প্রধান ইউটিউব ভিডিও আইডি
         type: string
       - name: leadTitle
         label: প্রধান প্রতিবেদনের শিরোনাম
@@ -23,49 +23,49 @@ content:
         type: object
         fields:
           - name: topBanner
-            label: ১. উপরের ব্যানার বিজ্ঞাপন (Top Banner)
+            label: ১. উপরের ব্যানার বিজ্ঞাপন
             type: object
             fields:
               - name: active
-                label: বিজ্ঞাপন চালু করুন (On/Off)
+                label: বিজ্ঞাপন চালু করুন
                 type: boolean
               - name: text
                 label: বিজ্ঞাপনের লেখা
                 type: string
               - name: image
-                label: ব্যানার ছবি (ঐচ্ছিক)
+                label: ব্যানার ছবি
                 type: image
               - name: link
                 label: বিজ্ঞাপনের লিংক
                 type: string
           - name: sidebarBox
-            label: ২. ডান পাশের বক্স বিজ্ঞাপন (Sidebar Ad)
+            label: ২. ডান পাশের বক্স বিজ্ঞাপন
             type: object
             fields:
               - name: active
-                label: বিজ্ঞাপন চালু করুন (On/Off)
+                label: বিজ্ঞাপন চালু করুন
                 type: boolean
               - name: text
                 label: বিজ্ঞাপনের লেখা
                 type: string
               - name: image
-                label: ব্যানার ছবি (ঐচ্ছিক)
+                label: ব্যানার ছবি
                 type: image
               - name: link
                 label: বিজ্ঞাপনের লিংক
                 type: string
           - name: midBanner
-            label: ৩. মাঝখানের ব্যানার বিজ্ঞাপন (Mid Banner)
+            label: ৩. মাঝখানের ব্যানার বিজ্ঞাপন
             type: object
             fields:
               - name: active
-                label: বিজ্ঞাপন চালু করুন (On/Off)
+                label: বিজ্ঞাপন চালু করুন
                 type: boolean
               - name: text
                 label: বিজ্ঞাপনের লেখা
                 type: string
               - name: image
-                label: ব্যানার ছবি (ঐচ্ছিক)
+                label: ব্যানার ছবি
                 type: image
               - name: link
                 label: বিজ্ঞাপনের লিংক
@@ -90,16 +90,16 @@ content:
                 - Campus Politics
                 - Tech & Research
           - name: catBn
-            label: বাংলা বিভাগের নাম (যেমন: নোটিশ, জব প্লেসমেন্ট)
+            label: বাংলা বিভাগের নাম
             type: string
           - name: date
             label: তারিখ
             type: string
           - name: reporter
-            label: প্রতিবেদক / ডেস্কের নাম
+            label: প্রতিবেদকের নাম
             type: string
           - name: image
-            label: সংবাদের ছবি (Upload Photo)
+            label: সংবাদের ছবি
             type: image
           - name: summary
             label: সংক্ষিপ্ত বিবরণ
@@ -109,5 +109,5 @@ content:
             label: বিস্তারিত সংবাদ
             type: text
           - name: link
-            label: অফিশিয়াল PDF বা ভিডিও লিংক
+            label: অফিশিয়াল লিংক / PDF
             type: string
