@@ -1,0 +1,113 @@
+media:
+  input: images
+  output: /images
+
+content:
+  - name: portal
+    label: TVET Tribune News & Ads Manager
+    type: file
+    path: data.json
+    format: json
+    fields:
+      - name: featuredVideoId
+        label: প্রধান ইউটিউব ভিডিও আইডি (YouTube Video ID)
+        type: string
+      - name: leadTitle
+        label: প্রধান প্রতিবেদনের শিরোনাম
+        type: string
+      - name: leadSummary
+        label: প্রধান প্রতিবেদনের সারসংক্ষেপ
+        type: text
+      - name: ads
+        label: বিজ্ঞাপন ম্যানেজমেন্ট (Ad Slots)
+        type: object
+        fields:
+          - name: topBanner
+            label: ১. উপরের ব্যানার বিজ্ঞাপন (Top Banner)
+            type: object
+            fields:
+              - name: active
+                label: বিজ্ঞাপন চালু করুন (On/Off)
+                type: boolean
+              - name: text
+                label: বিজ্ঞাপনের লেখা
+                type: string
+              - name: image
+                label: ব্যানার ছবি (ঐচ্ছিক)
+                type: image
+              - name: link
+                label: বিজ্ঞাপনের লিংক
+                type: string
+          - name: sidebarBox
+            label: ২. ডান পাশের বক্স বিজ্ঞাপন (Sidebar Ad)
+            type: object
+            fields:
+              - name: active
+                label: বিজ্ঞাপন চালু করুন (On/Off)
+                type: boolean
+              - name: text
+                label: বিজ্ঞাপনের লেখা
+                type: string
+              - name: image
+                label: ব্যানার ছবি (ঐচ্ছিক)
+                type: image
+              - name: link
+                label: বিজ্ঞাপনের লিংক
+                type: string
+          - name: midBanner
+            label: ৩. মাঝখানের ব্যানার বিজ্ঞাপন (Mid Banner)
+            type: object
+            fields:
+              - name: active
+                label: বিজ্ঞাপন চালু করুন (On/Off)
+                type: boolean
+              - name: text
+                label: বিজ্ঞাপনের লেখা
+                type: string
+              - name: image
+                label: ব্যানার ছবি (ঐচ্ছিক)
+                type: image
+              - name: link
+                label: বিজ্ঞাপনের লিংক
+                type: string
+      - name: articles
+        label: সকল সংবাদ ও নোটিশ (Articles)
+        type: object
+        list: true
+        fields:
+          - name: title
+            label: সংবাদের শিরোনাম
+            type: string
+            required: true
+          - name: cat
+            label: ক্যাটাগরি কোড
+            type: select
+            options:
+              values:
+                - Notices
+                - Training
+                - Job Placement
+                - Campus Politics
+                - Tech & Research
+          - name: catBn
+            label: বাংলা বিভাগের নাম (যেমন: নোটিশ, জব প্লেসমেন্ট)
+            type: string
+          - name: date
+            label: তারিখ
+            type: string
+          - name: reporter
+            label: প্রতিবেদক / ডেস্কের নাম
+            type: string
+          - name: image
+            label: সংবাদের ছবি (Upload Photo)
+            type: image
+          - name: summary
+            label: সংক্ষিপ্ত বিবরণ
+            type: text
+            required: true
+          - name: details
+            label: বিস্তারিত সংবাদ
+            type: text
+          - name: link
+            label: অফিশিয়াল PDF বা ভিডিও লিংক
+            type: string

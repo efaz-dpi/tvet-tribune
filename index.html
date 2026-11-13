@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TVET Tribune | সব সময় কারিগরি কথা বলে</title>
+
+  <!-- Bangla & English Clean Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 CSS & Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #ffffff;
+      color: #1e293b;
+      font-family: 'Hind Siliguri', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Responsive Header */
+    .site-header {
+      border-bottom: 2px solid #0f2942;
+      padding: 0.9rem 0;
+    }
+
+    .brand-name {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 800;
+      font-size: clamp(1.65rem, 4vw, 2.1rem);
+      color: #0f2942;
+      text-decoration: none;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+
+    .brand-name span {
+      color: #dc2626;
+    }
+
+    .slogan {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #475569;
+    }
+
+    /* Social Icons */
+    .social-icon-btn {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #cbd5e1;
+      color: #0f2942;
+      text-decoration: none;
+      transition: all 0.2s;
+      flex-shrink: 0;
+    }
+
+    .social-icon-btn:hover {
+      background-color: #0f2942;
+      color: #ffffff;
+      border-color: #0f2942;
+    }
+
+    /* Mobile-Friendly Horizontal Scrollable Menu */
+    .simple-nav {
+      background-color: #f8fafc;
+      border-bottom: 1px solid #e2e8f0;
+      position: sticky;
+      top: 0;
+      z-index: 1020;
+    }
+
+    .nav-scroll-wrapper {
+      display: flex;
+      align-items: center;
+      overflow-x: auto;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      gap: 0.25rem;
+      padding: 0.35rem 0;
+    }
+
+    .nav-scroll-wrapper::-webkit-scrollbar {
+      display: none;
+    }
+
+    .nav-scroll-wrapper .nav-link {
+      color: #0f2942;
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 0.45rem 0.85rem;
+      border-radius: 6px;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .nav-scroll-wrapper .nav-link:hover,
+    .nav-scroll-wrapper .nav-link.active {
+      color: #ffffff;
+      background-color: #0f2942;
+    }
+
+    /* Section Headings */
+    .section-title {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #0f2942;
+      border-left: 4px solid #dc2626;
+      padding-left: 0.65rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Clean News Card with Photo */
+    .news-item {
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      background: #ffffff;
+      overflow: hidden;
+      transition: border-color 0.2s, transform 0.15s;
+      cursor: pointer;
+    }
+
+    .news-item:hover {
+      border-color: #0f2942;
+    }
+
+    .news-card-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-bottom: 1px solid #f1f5f9;
+      background-color: #f1f5f9;
+    }
+
+    /* Latest News Row (Text Only) */
+    .latest-row {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid #e2e8f0;
+      cursor: pointer;
+    }
+
+    .latest-row:hover h5 {
+      color: #dc2626;
+    }
+
+    /* Ad Slot Styling */
+    .ad-slot-box {
+      border: 1px dashed #94a3b8;
+      background-color: #f8fafc;
+      border-radius: 6px;
+      padding: 0.85rem;
+      text-align: center;
+    }
+
+    .ad-label {
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #64748b;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    /* Full-Page Article View Styling */
+    .article-page-headline {
+      font-size: clamp(1.35rem, 3.5vw, 2rem);
+      font-weight: 700;
+      line-height: 1.38;
+      color: #0f172a;
+    }
+
+    .article-body-content p {
+      margin-bottom: 1.15rem;
+      line-height: 1.9;
+      font-size: 1.06rem;
+      color: #1e293b;
+    }
+
+    /* Share Buttons */
+    .share-btn {
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      border: none;
+      cursor: pointer;
+      transition: opacity 0.15s;
+    }
+
+    .share-btn:hover {
+      opacity: 0.88;
+    }
+
+    .share-fb { background-color: #1877f2; color: #fff; }
+    .share-wa { background-color: #25d366; color: #fff; }
+    .share-msg { background-color: #0084ff; color: #fff; }
+    .share-in { background-color: #0a66c2; color: #fff; }
+    .share-copy { background-color: #e2e8f0; color: #0f2942; }
+
+    footer {
+      border-top: 2px solid #0f2942;
+      background-color: #f8fafc;
+      color: #334155;
+    }
+
+    @media (max-width: 576px) {
+      .news-card-img {
+        height: 160px;
+      }
+      .share-btn {
+        font-size: 0.78rem;
+        padding: 0.35rem 0.65rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="row align-items-center gy-2">
+        <!-- Brand & Slogan -->
+        <div class="col-12 col-md-5 text-center text-md-start">
+          <a href="#" onclick="closeFullArticle(event)" class="brand-name d-block">TVET <span>TRIBUNE</span></a>
+          <div class="slogan">সব সময় কারিগরি কথা বলে</div>
+        </div>
+
+        <!-- Search & Social Icons -->
+        <div class="col-12 col-md-7">
+          <div class="d-flex flex-wrap justify-content-center justify-content-md-end align-items-center gap-2">
+            <!-- Keyword Search Input -->
+            <div class="input-group input-group-sm" style="max-width: 250px;">
+              <input type="text" id="search-input" class="form-control" placeholder="কিওয়ার্ড লিখে খুঁজুন...">
+              <button class="btn btn-dark" type="button" id="search-btn" aria-label="Search">
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+
+            <!-- Social Media Icons (Facebook, YouTube, LinkedIn) -->
+            <div class="d-flex align-items-center gap-2">
+              <a href="https://facebook.com" target="_blank" class="social-icon-btn" title="Facebook">
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a href="https://youtube.com" target="_blank" class="social-icon-btn" title="YouTube">
+                <i class="bi bi-youtube"></i>
+              </a>
+              <a href="https://linkedin.com" target="_blank" class="social-icon-btn" title="LinkedIn">
+                <i class="bi bi-linkedin"></i>
+              </a>
+            </div>
+          </div>
+          <div class="text-center text-md-end small text-muted mt-1">
+            ঢাকা, শুক্রবার • ১৩ নভেম্বর ২০২৬
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile-Responsive Swipeable Navigation -->
+  <nav class="simple-nav">
+    <div class="container d-flex align-items-center justify-content-between gap-2">
+      <div class="nav-scroll-wrapper">
+        <a class="nav-link filter-link active" href="#all-news" data-cat="All">সব খবর</a>
+        <a class="nav-link filter-link" href="#all-news" data-cat="Notices">নোটিশ</a>
+        <a class="nav-link filter-link" href="#all-news" data-cat="Training">প্রশিক্ষণ</a>
+        <a class="nav-link filter-link" href="#all-news" data-cat="Job Placement">জব প্লেসমেন্ট</a>
+        <a class="nav-link filter-link" href="#all-news" data-cat="Campus Politics">ক্যাম্পাস রাজনীতি</a>
+        <a class="nav-link filter-link" href="#all-news" data-cat="Tech & Research">প্রযুক্তি ও গবেষণা</a>
+      </div>
+      <a href="#submit-news" onclick="closeFullArticle(event, true)" class="btn btn-dark btn-sm fw-semibold flex-shrink-0">সংবাদ পাঠান</a>
+    </div>
+  </nav>
+
+  <!-- Ad Slot 1: Top Leaderboard Banner -->
+  <div class="container mt-3">
+    <div class="ad-slot-box" id="ad-top-banner">
+      <span class="ad-label">বিজ্ঞাপন (Advertisement)</span>
+      <a href="#submit-news" onclick="closeFullArticle(event, true)" class="text-decoration-none text-dark small fw-semibold">
+        আপনার প্রতিষ্ঠান, কোচিং বা টেক প্রোডাক্টের বিজ্ঞাপনের জন্য এখানে যোগাযোগ করুন (৭২৮ × ৯০ ব্যানার স্পেস)
+      </a>
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- VIEW 1: HOME PAGE VIEW (Default View)                     -->
+  <!-- ========================================================= -->
+  <main class="py-4" id="home-view">
+    <div class="container">
+
+      <!-- Top Section: Featured Video + Latest News (Text Only) & Sidebar Ad -->
+      <div class="row g-4 mb-5">
+        
+        <!-- Left: Featured Investigation -->
+        <div class="col-lg-7">
+          <h2 class="section-title">প্রধান প্রতিবেদন</h2>
+          <div class="border rounded p-3">
+            <div class="ratio ratio-16x9 mb-3 rounded overflow-hidden bg-dark">
+              <iframe id="featured-video" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="TVET Tribune Video" allowfullscreen></iframe>
+            </div>
+            <span class="badge bg-danger mb-2">গবেষণা ও প্রযুক্তি</span>
+            <h1 class="h4 fw-bold mb-2" id="lead-title">ডিপ্লোমা প্রকৌশলীদের কর্মসংস্থান বাস্তবতা: ৬৫% বেসরকারি খাতে গেলেও ইন্ডাস্ট্রি ও ল্যাবের ব্যবধান কেন কমছে না?</h1>
+            <p class="small text-secondary mb-2" id="lead-summary">
+              কারিগরি শিক্ষা অধিদপ্তর (DTE) ও বিটিইবির সাম্প্রতিক তথ্য বিশ্লেষণে উঠে এসেছে আধুনিক ল্যাব ও ইন্ডাস্ট্রিয়াল অ্যাটাচমেন্টের বাস্তব চিত্র।
+            </p>
+            <div class="small text-muted">১৩ নভেম্বর ২০২৬ • TVET Tribune ডেস্ক</div>
+          </div>
+        </div>
+
+        <!-- Right: Latest News (সর্বশেষ সংবাদ - Text Only) + Sidebar Ad -->
+        <div class="col-lg-5">
+          <h2 class="section-title">সর্বশেষ সংবাদ (Latest News)</h2>
+          <div id="latest-list" class="mb-4"></div>
+
+          <!-- Ad Slot 2: Sidebar Box Ad -->
+          <div class="ad-slot-box" id="ad-sidebar-box">
+            <span class="ad-label">স্পনসরড বিজ্ঞাপন (৩০০ × ২৫০)</span>
+            <a href="#submit-news" onclick="closeFullArticle(event, true)" class="text-decoration-none text-dark small fw-semibold d-block py-3">
+              DUET অ্যাডমিশন কোচিং, IT ট্রেনিং বা ইন্ডাস্ট্রিয়াল অ্যাটাচমেন্ট বিজ্ঞাপনের স্থান
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Ad Slot 3: Mid-Page Horizontal Banner -->
+      <div class="ad-slot-box mb-4" id="ad-mid-banner">
+        <span class="ad-label">বিজ্ঞাপন (Advertisement)</span>
+        <a href="#submit-news" onclick="closeFullArticle(event, true)" class="text-decoration-none text-dark small fw-semibold">
+          কারিগরি শিক্ষার্থী ও প্রকৌশলীদের কাছে আপনার ব্র্যান্ড পৌঁছে দিন — বিজ্ঞাপনের জন্য ক্লিক করুন
+        </a>
+      </div>
+
+      <!-- Category News Grid (Max 6 on Front Page + "আরও পড়ুন" Button) -->
+      <div class="mb-5" id="all-news">
+        <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+          <h2 class="section-title mb-0">সকল সংবাদ ও নোটিশ</h2>
+          <div class="d-flex align-items-center gap-2">
+            <span class="small text-muted" id="active-label">বিভাগ: সব খবর</span>
+            <button class="btn btn-outline-secondary btn-sm d-none" id="clear-search-btn">সার্চ মুছুন</button>
+          </div>
+        </div>
+
+        <div class="row g-3" id="news-grid"></div>
+
+        <!-- Load More ("আরও পড়ুন") Button Wrapper -->
+        <div class="text-center mt-4 d-none" id="load-more-wrapper">
+          <button type="button" id="load-more-btn" class="btn btn-outline-dark px-4 py-2 fw-bold">
+            আরও পড়ুন <i class="bi bi-arrow-down-circle ms-1"></i>
+          </button>
+          <div class="small text-muted mt-1" id="news-count-info"></div>
+        </div>
+      </div>
+
+      <!-- Submit News Box with Photo Attachment Support -->
+      <div class="pt-4 border-top" id="submit-news">
+        <div class="row justify-content-center">
+          <div class="col-lg-7">
+            <h3 class="h5 fw-bold text-dark mb-1">সংবাদ, নোটিশ বা বিজ্ঞাপনের জন্য যোগাযোগ করুন</h3>
+            <p class="small text-muted mb-3">সংবাদ বা নোটিশের বিস্তারিত লেখার পাশাপাশি সংশ্লিষ্ট ছবি বা ডকুমেন্ট (JPG, PNG, PDF) সংযুক্ত করে পাঠাতে পারেন।</p>
+            
+            <!-- Replace YOUR_EMAIL@gmail.com with your actual email address -->
+            <form action="https://formsubmit.co/YOUR_EMAIL@gmail.com" method="POST" enctype="multipart/form-data">
+              <input type="hidden" name="_subject" value="TVET Tribune - নতুন সংবাদ/তথ্য এসেছে">
+              <input type="hidden" name="_captcha" value="false">
+
+              <div class="row g-2 mb-2">
+                <div class="col-12 col-md-6">
+                  <input type="text" name="sender_name" class="form-control form-control-sm" placeholder="আপনার নাম ও প্রতিষ্ঠান / মোবাইল নম্বর" required>
+                </div>
+                <div class="col-12 col-md-6">
+                  <select name="category" class="form-select form-select-sm">
+                    <option value="Notices">নোটিশ (BTEB / NSDA / ক্যাম্পাস)</option>
+                    <option value="Campus Politics">ক্যাম্পাস রাজনীতি</option>
+                    <option value="Job Placement">জব প্লেসমেন্ট ও অ্যাটাচমেন্ট</option>
+                    <option value="Training">প্রশিক্ষণ বিজ্ঞপ্তি</option>
+                    <option value="Tech & Research">প্রযুক্তি ও গবেষণা</option>
+                    <option value="Advertisement">বিজ্ঞাপন (Advertisement Inquiry)</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Photo / Document Upload Input -->
+              <div class="mb-2">
+                <label class="form-label small fw-semibold text-dark mb-1">
+                  <i class="bi bi-image me-1 text-danger"></i>সংবাদের ছবি বা নোটিশের কপি সংযুক্ত করুন (ঐচ্ছিক):
+                </label>
+                <input type="file" name="attachment" accept="image/png, image/jpeg, image/webp, application/pdf" class="form-control form-control-sm">
+              </div>
+
+              <div class="mb-2">
+                <textarea name="message" rows="3" class="form-control form-control-sm" placeholder="সংবাদের বিস্তারিত লিখুন..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-dark btn-sm px-4 fw-semibold">ছবিসহ পাঠিয়ে দিন</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ========================================================= -->
+  <!-- VIEW 2: FULL-PAGE ARTICLE READER VIEW                     -->
+  <!-- ========================================================= -->
+  <section class="py-4 d-none" id="article-page-view">
+    <div class="container">
+      
+      <!-- Top Back Navigation & Category Breadcrumb -->
+      <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 pb-3 mb-4 border-bottom">
+        <button type="button" class="btn btn-outline-dark btn-sm fw-semibold" onclick="closeFullArticle(event)">
+          <i class="bi bi-arrow-left me-1"></i> মূল পাতায় ফিরে যান
+        </button>
+        <div class="small text-muted">
+          হোম &rsaquo; <span class="text-danger fw-bold" id="fp-breadcrumb-cat">বিভাগ</span>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Main Full Article Column (8 Cols) -->
+        <div class="col-lg-8">
+          <article class="bg-white">
+            <span class="badge bg-danger mb-2" id="fp-badge">বিভাগ</span>
+            <h1 class="article-page-headline mb-3" id="fp-title">সংবাদের শিরোনাম</h1>
+
+            <!-- Reporter, Date & Share Buttons -->
+            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 py-2 px-3 bg-light rounded border mb-3">
+              <div class="small text-muted" id="fp-meta">প্রতিবেদক ও তারিখ</div>
+              <div class="d-flex flex-wrap gap-1" id="fp-share-top"></div>
+            </div>
+
+            <!-- Article Main Cover Image -->
+            <img id="fp-image" src="" alt="News Photo" class="img-fluid rounded border mb-4 w-100" style="max-height: 440px; object-fit: cover;">
+
+            <!-- Highlighted Lead Summary -->
+            <p class="fw-bold text-dark fs-5 p-3 bg-light border-start border-4 border-danger rounded-end mb-4" id="fp-summary"></p>
+
+            <!-- Multi-Paragraph Full Story Content -->
+            <div class="article-body-content" id="fp-details"></div>
+
+            <!-- Official PDF / Video Link Button -->
+            <div class="my-4" id="fp-link-box">
+              <a id="fp-link" href="#" target="_blank" class="btn btn-primary btn-sm px-4 py-2 fw-semibold">
+                অফিশিয়াল নোটিশ PDF / ভিডিও লিংক দেখুন <i class="bi bi-box-arrow-up-right ms-1"></i>
+              </a>
+            </div>
+
+            <!-- Bottom Share Bar -->
+            <div class="mt-4 pt-3 border-top">
+              <div class="small fw-bold text-dark mb-2">সংবাদটি বন্ধুদের সাথে শেয়ার করুন:</div>
+              <div class="d-flex flex-wrap gap-2" id="fp-share-bottom"></div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Right Sidebar: More News & Ad Space (4 Cols) -->
+        <div class="col-lg-4">
+          <div class="border rounded p-3 bg-light mb-4">
+            <h3 class="section-title">আরও সংবাদ পড়ুন</h3>
+            <div id="fp-related-list"></div>
+          </div>
+
+          <div class="ad-slot-box">
+            <span class="ad-label">বিজ্ঞাপন (Advertisement)</span>
+            <a href="#submit-news" onclick="closeFullArticle(event, true)" class="text-decoration-none text-dark small fw-semibold d-block py-4">
+              আপনার প্রতিষ্ঠান বা কোর্সের বিজ্ঞাপনের জন্য এখানে যোগাযোগ করুন (৩০০ × ২৫০)
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer with Editor, Publisher & Tejgaon Address -->
+  <footer class="py-4 mt-4">
+    <div class="container">
+      <div class="row align-items-center gy-3 small">
+        <div class="col-12 col-md-6 text-center text-md-start">
+          <div class="fw-bold fs-5 text-dark" style="font-family:'Plus Jakarta Sans',sans-serif;">
+            TVET <span style="color:#dc2626;">TRIBUNE</span>
+          </div>
+          <div class="fw-semibold text-dark mb-1">“সব সময় কারিগরি কথা বলে”</div>
+          <div class="text-muted">কারিগরি শিক্ষা, জব প্লেসমেন্ট ও প্রযুক্তি গবেষণার স্বাধীন অনলাইন সংবাদপত্র।</div>
+        </div>
+        <div class="col-12 col-md-6 text-center text-md-end">
+          <div class="fw-bold text-dark">সম্পাদক ও প্রকাশক: ইফাজ আলম মাহি</div>
+          <div class="text-muted">কার্যালয়: তেজগাঁও শিল্প এলাকা, ঢাকা ১২০৮</div>
+          <div class="mt-1">
+            <a href="#submit-news" onclick="closeFullArticle(event, true)" class="text-danger text-decoration-none fw-semibold">বিজ্ঞাপন ও যোগাযোগ</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    function getDefaultCover(label) {
+      const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="800" height="420" viewBox="0 0 800 420">
+        <rect width="800" height="420" fill="#0f2942"/>
+        <rect x="0" y="406" width="800" height="14" fill="#dc2626"/>
+        <text x="50%" y="46%" dominant-baseline="middle" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-size="30" font-weight="bold">TVET TRIBUNE</text>
+        <text x="50%" y="60%" dominant-baseline="middle" text-anchor="middle" fill="#fbbf24" font-family="sans-serif" font-size="18">${label}</text>
+      </svg>`;
+      return "data:image/svg+xml;charset=UTF-8," + encodeURIComponent(svg);
+    }
+
+    const fallbackArticles = [
+      {
+        title: "বিটিইবি ডিপ্লোমা-ইন-ইঞ্জিনিয়ারিং সেমিস্টার পরীক্ষার রুটিন ও ফরম ফিলাপের বিজ্ঞপ্তি প্রকাশ",
+        cat: "Notices",
+        catBn: "নোটিশ",
+        date: "১৩ নভেম্বর ২০২৬",
+        reporter: "নোটিশ ডেস্ক",
+        image: "",
+        summary: "বাংলাদেশ কারিগরি শিক্ষা বোর্ড (BTEB) আসন্ন সেমিস্টার সমাপনী পরীক্ষার সময়সূচি, ফি জমার শেষ তারিখ এবং প্রতিষ্ঠানভিত্তিক অনলাইন ফরম ফিলাপের বিস্তারিত নির্দেশনা প্রকাশ করেছে।",
+        details: "বাংলাদেশ কারিগরি শিক্ষা বোর্ডের (BTEB) পরীক্ষা নিয়ন্ত্রক দপ্তর থেকে প্রকাশিত এক জরুরি বিজ্ঞপ্তিতে জানানো হয়েছে, ২০২৬ সালের ডিপ্লোমা-ইন-ইঞ্জিনিয়ারিং শিক্ষাক্রমের নিয়মিত ও অনিয়মিত পর্বের পরীক্ষার সময়সূচি চূড়ান্ত করা হয়েছে। ২০১৬ ও ২০২২ প্রবিধানের সকল সরকারি ও বেসরকারি পলিটেকনিক ইনস্টিটিউটের শিক্ষার্থীদের নির্ধারিত তারিখের মধ্যে নিজ নিজ প্রতিষ্ঠানের একাডেমিক শাখায় প্রয়োজনীয় কাগজপত্র ও ফি জমা দিয়ে অনলাইন ফরম ফিলাপ সম্পন্ন করতে হবে।\n\nবিজ্ঞপ্তিতে আরও উল্লেখ করা হয়েছে, যেসব শিক্ষার্থীর পূর্ববর্তী সেমিস্টারে রেফার্ড বা অকৃতকার্য বিষয় রয়েছে, তাদের অবশ্যই সংশ্লিষ্ট বিষয়ের কোড যাচাই করে আবেদন করতে হবে। নির্ধারিত সময়ের পর বিলম্ব ফিসহ অতিরিক্ত তিন দিন আবেদনের সুযোগ থাকবে; এরপর কোনোভাবেই ফরম ফিলাপের তথ্য সংশোধন বা নতুন অন্তর্ভুক্তি গ্রহণ করা হবে না।\n\nপরীক্ষা চলাকালীন কেন্দ্রের শৃঙ্খলা বজায় রাখতে বোর্ডের পক্ষ থেকে বিশেষ ভিজিল্যান্স টিম গঠন করা হয়েছে। মূল রুটিন ও ফি কাঠামোর অফিশিয়াল পিডিএফ কপি নিচের লিংক থেকে সরাসরি ডাউনলোড করা যাবে।",
+        link: "https://bteb.gov.bd"
+      },
+      {
+        title: "ল্যাব আধুনিকায়ন ও বকেয়া বৃত্তির দাবিতে পলিটেকনিক শিক্ষার্থীদের ৬ দফা স্মারকলিপি পেশ",
+        cat: "Campus Politics",
+        catBn: "ক্যাম্পাস রাজনীতি",
+        date: "১২ নভেম্বর ২০২৬",
+        reporter: "ক্যাম্পাস ডেস্ক",
+        image: "",
+        summary: "আধুনিক ওয়ার্কশপ সরঞ্জাম সরবরাহ, শিক্ষক সংকট নিরসন এবং সেমিস্টার বৃত্তির অর্থ দ্রুত ছাড়ের দাবিতে অধ্যক্ষ বরাবর ৬ দফা স্মারকলিপি দিয়েছেন সাধারণ শিক্ষার্থীরা।",
+        details: "বৃহস্পতিবার সকালে ক্যাম্পাসের প্রশাসনিক ভবনের সামনে বিভিন্ন টেকনোলজির শিক্ষার্থীরা সমবেত হয়ে শান্তিপূর্ণ অবস্থান কর্মসূচি পালন করেন। পরে শিক্ষার্থী প্রতিনিধি দল অধ্যক্ষের কার্যালয়ে গিয়ে ৬ দফা দাবিসংবলিত একটি লিখিত স্মারকলিপি হস্তান্তর করেন।\n\nশিক্ষার্থীদের প্রধান দাবিগুলোর মধ্যে রয়েছে—কম্পিউটার, ইলেকট্রিক্যাল, ইলেকট্রনিক্স ও মেকানিক্যাল ল্যাবের অকেজো যন্ত্রপাতি দ্রুত মেরামত ও নতুন সরঞ্জাম সংযোজন, ব্যবহারিক ক্লাসের সংখ্যা বৃদ্ধি, শূন্য পদে ক্রাফট ইনস্ট্রাক্টর ও জুনিয়র ইনস্ট্রাক্টর নিয়োগ এবং দীর্ঘদিন আটকে থাকা সেমিস্টার বৃত্তির টাকা দ্রুত শিক্ষার্থীদের ব্যাংক ও মোবাইল ব্যাংকিং হিসাবে পৌঁছে দেওয়া।\n\nএ বিষয়ে ইনস্টিটিউট প্রশাসন জানিয়েছে, শিক্ষার্থীদের দাবিগুলো অত্যন্ত যৌক্তিক। ল্যাব সরঞ্জাম ক্রয়ের চাহিদাপত্র ইতিমধ্যে কারিগরি শিক্ষা অধিদপ্তরে (DTE) পাঠানো হয়েছে এবং বৃত্তির অর্থ ছাড়ের বিষয়ে মন্ত্রণালয়ের সাথে নিয়মিত যোগাযোগ রাখা হচ্ছে।",
+        link: "#"
+      },
+      {
+        title: "১০ম গ্রেড উপ-সহকারী প্রকৌশলী (SAE) নিয়োগ ও প্রাইভেট সেক্টরে জব সার্কুলার",
+        cat: "Job Placement",
+        catBn: "জব প্লেসমেন্ট",
+        date: "১২ নভেম্বর ২০২৬",
+        reporter: "জব প্লেসমেন্ট ডেস্ক",
+        image: "",
+        summary: "সরকারি ১০ম গ্রেড উপ-সহকারী প্রকৌশলী নিয়োগ বিজ্ঞপ্তি এবং বেসরকারি আইএসপি, টেলিকম ও পাওয়ার সেক্টরে ডিপ্লোমা প্রকৌশলীদের জন্য ইন্টার্নশিপ ও চাকরির সুযোগ।",
+        details: "সদ্য ডিপ্লোমা-ইন-ইঞ্জিনিয়ারিং পাস করা শিক্ষার্থীদের কর্মসংস্থানের লক্ষ্যে চলতি সপ্তাহের সরকারি ও বেসরকারি নিয়োগ বিজ্ঞপ্তিগুলো একত্রিত করা হয়েছে। সরকারি বিভিন্ন সংস্থায় ১০ম গ্রেডের উপ-সহকারী প্রকৌশলী (Sub-Assistant Engineer) পদে সিভিল, ইলেকট্রিক্যাল ও মেকানিক্যাল টেকনোলজির প্রার্থীরা অনলাইনে আবেদন করতে পারবেন।\n\nঅন্যদিকে, বেসরকারি খাতে দেশের শীর্ষস্থানীয় ইন্টারনেট সার্ভিস প্রোভাইডার (ISP), নেটওয়ার্ক সলিউশন কোম্পানি, সিসিটিভি ও ইন্ডাস্ট্রিয়াল অটোমেশন প্রতিষ্ঠানগুলোতে জুনিয়র নেটওয়ার্ক ইঞ্জিনিয়ার, টেকনিক্যাল সাপোর্ট ইঞ্জিনিয়ার এবং আইওটি ডেভেলপার পদে নিয়োগ চলছে। রাউটিং, সুইচিং, ওএলটি (OLT) কনফিগারেশন ও হার্ডওয়্যার ট্রাবলশুটিংয়ে বাস্তব দক্ষতা থাকলে প্রার্থীরা অগ্রাধিকার পাবেন।\n\nএছাড়া অষ্টম পর্বের শিক্ষার্থীদের জন্য ঢাকার তেজগাঁও, মিরপুর ও গাজীপুর শিল্প এলাকায় বেশ কয়েকটি প্রকৌশল প্রতিষ্ঠানে পেইড ও নন-পেইড ইন্ডাস্ট্রিয়াল অ্যাটাচমেন্টের সুযোগ উন্মুক্ত রয়েছে।",
+        link: "#"
+      },
+      {
+        title: "NSDA CBT&A লেভেল-৩ ও ৪ ট্রেইনার এবং অ্যাসেসর নিবন্ধন বিজ্ঞপ্তি",
+        cat: "Training",
+        catBn: "প্রশিক্ষণ",
+        date: "১১ নভেম্বর ২০২৬",
+        reporter: "প্রশিক্ষণ ডেস্ক",
+        image: "",
+        summary: "জাতীয় দক্ষতা উন্নয়ন কর্তৃপক্ষ (NSDA) অনুমোদিত অ্যাসেসমেন্ট সেন্টারে কম্পিটেন্সি বেজড ট্রেনিং ও অ্যাসেসমেন্ট (CBT&A) কার্যক্রমের নতুন সময়সূচি প্রকাশিত হয়েছে।",
+        details: "জাতীয় দক্ষতা উন্নয়ন কর্তৃপক্ষ (NSDA) দেশের কারিগরি প্রশিক্ষণ কেন্দ্রগুলোর মানোন্নয়নের লক্ষ্যে আইটি সাপোর্ট সার্ভিস, ওয়েব ডিজাইন, ইলেকট্রিক্যাল ইনস্টলেশন এবং গ্রাফিক ডিজাইন অকুপেশনে নতুন করে ট্রেইনার ও অ্যাসেসর নিবন্ধনের আহ্বান জানিয়েছে।\n\nআগ্রহী প্রার্থীদের ন্যূনতম ডিপ্লোমা-ইন-ইঞ্জিনিয়ারিং ডিগ্রিসহ সংশ্লিষ্ট অকুপেশনে এনটিভি কিউএফ (NTVQF) বা বিএনকিউএফ (BNQF) লেভেল-৩ অথবা লেভেল-৪ সনদ এবং ৭২ ঘণ্টার পেডাগজি (Pedagogy) প্রশিক্ষণ থাকতে হবে। প্রশিক্ষণ শেষে মূল্যায়ন পরীক্ষায় উত্তীর্ণরা দেশব্যাপী অনুমোদিত অ্যাসেসমেন্ট সেন্টারগুলোতে অ্যাসেসর হিসেবে দায়িত্ব পালনের সুযোগ পাবেন।\n\nআবেদনের নিয়মাবলি, প্রয়োজনীয় ডকুমেন্টের তালিকা এবং নির্ধারিত ফি জমাদানের বিস্তারিত তথ্য এনএসডিএ-র অফিশিয়াল পোর্টালে পাওয়া যাবে।",
+        link: "https://nsda.gov.bd"
+      },
+      {
+        title: "মাঠ পর্যায়ের টেস্ট: এক্সটার্নাল অ্যান্টেনাযুক্ত 4G LTE রাউটার বনাম সাধারণ ইনডোর রাউটার",
+        cat: "Tech & Research",
+        catBn: "প্রযুক্তি ও গবেষণা",
+        date: "১০ নভেম্বর ২০২৬",
+        reporter: "টেক ডেস্ক",
+        image: "",
+        summary: "দুর্বল সিগন্যাল জোনে রিমুভেবল কো-অ্যাক্সিয়াল অ্যান্টেনাযুক্ত 4G রাউটারের সিগন্যাল গেইন, পিং স্ট্যাবিলিটি ও ইন্টারনেট স্পিডের বাস্তব পরীক্ষা।",
+        details: "শহরের ঘনবসতিপূর্ণ কংক্রিট ভবন, ছাত্রাবাস কিংবা দূরবর্তী ইন্ডাস্ট্রিয়াল ল্যাবে মোবাইল সিমের নেটওয়ার্ক দুর্বল থাকায় অনেকেই নিরবচ্ছিন্ন ইন্টারনেট সংযোগ পান না। এই সমস্যা সমাধানে আমরা TP-Link TL-MR105 এবং রিমুভেবল SMA কো-অ্যাক্সিয়াল অ্যান্টেনাযুক্ত Cudy 4G LTE রাউটারের মধ্যে সরাসরি মাঠ পর্যায়ের তুলনামূলক পরীক্ষা চালিয়েছি।\n\nপরীক্ষায় দেখা গেছে, সাধারণ ইনডোর রাউটারের তুলনায় এক্সটার্নাল হাই-গেইন অ্যান্টেনা যুক্ত রাউটারে RSRP এবং SINR সিগন্যাল মান উল্লেখযোগ্যভাবে উন্নত হয়। বিশেষ করে অনলাইন ক্লাস, ভিডিও কনফারেন্সিং এবং ক্লাউড সার্ভার পিংয়ের ক্ষেত্রে প্যাকেট লস প্রায় শূন্যে নেমে আসে।\n\nযারা দূরবর্তী এলাকায় আইওটি (IoT) প্রজেক্ট, সিসিটিভি মনিটরিং কিংবা হোম অফিসের জন্য ব্যাকআপ ইন্টারনেট সেটআপ করতে চান, তাদের জন্য এক্সটার্নাল অ্যান্টেনা সাপোর্টেড রাউটারগুলো অনেক বেশি কার্যকর।",
+        link: "https://youtube.com"
+      },
+      {
+        title: "ডুয়েট (DUET) ভর্তি প্রস্তুতি ও ইন্ডাস্ট্রিয়াল অ্যাটাচমেন্ট নির্বাচন নির্দেশিকা ২০২৬",
+        cat: "Training",
+        catBn: "প্রশিক্ষণ",
+        date: "০৯ নভেম্বর ২০২৬",
+        reporter: "ক্যারিয়ার ডেস্ক",
+        image: "",
+        summary: "অষ্টম পর্বের শিক্ষার্থীদের সঠিক ইন্ডাস্ট্রি নির্বাচন এবং ঢাকা প্রকৌশল ও প্রযুক্তি বিশ্ববিদ্যালয় (DUET) ভর্তি পরীক্ষার প্রাথমিক প্রস্তুতির কৌশল।",
+        details: "ডিপ্লোমা-ইন-ইঞ্জিনিয়ারিংয়ের অষ্টম পর্বের শিক্ষার্থীদের জন্য ইন্ডাস্ট্রিয়াল অ্যাটাচমেন্ট একটি অত্যন্ত গুরুত্বপূর্ণ অধ্যায়। শুধুমাত্র সার্টিফিকেট সংগ্রহের উদ্দেশ্যে প্রতিষ্ঠান নির্বাচন না করে যেসব প্রতিষ্ঠানে হাতে-কলমে নেটওয়ার্ক কনফিগারেশন, সার্ভার ম্যানেজমেন্ট, পিএলসি অটোমেশন বা প্রোডাকশন লাইনের কাজ শেখানো হয়, সেসব প্রতিষ্ঠান বেছে নেওয়া উচিত।\n\nপাশাপাশি যারা উচ্চশিক্ষার জন্য ডুয়েট (DUET) ভর্তি পরীক্ষায় অংশ নিতে চান, তাদের জন্য অ্যাটাচমেন্ট চলাকালীন সময় থেকেই নন-ডিপার্টমেন্টাল বিষয় (পদার্থ, রসায়ন, গণিত ও ইংরেজি) এবং ডিপার্টমেন্টাল বেসিক কনসেপ্টগুলো নিয়মিত চর্চা করা জরুরি।\n\nআগামী সংখ্যায় আমরা টেকনোলজিভিত্তিক সেরা ইন্ডাস্ট্রিয়াল অ্যাটাচমেন্ট প্রতিষ্ঠানগুলোর একটি যাচাইকৃত তালিকা প্রকাশ করব।",
+        link: "#"
+      },
+      {
+        title: "পলিটেকনিক শিক্ষার্থীদের উদ্ভাবিত স্মার্ট ওয়াটার মনিটরিং সিস্টেম 'DrainSense' জাতীয় পুরস্কারে ভূষিত",
+        cat: "Tech & Research",
+        catBn: "প্রযুক্তি ও গবেষণা",
+        date: "০৮ নভেম্বর ২০২৬",
+        reporter: "উদ্ভাবন ডেস্ক",
+        image: "",
+        summary: "ESP32 ও STM32 মাইক্রোকন্ট্রোলার এবং মাল্টি-প্যারামিটার সেন্সর ব্যবহার করে তৈরি পরিবেশবান্ধব বর্জ্যপানি পর্যবেক্ষণ প্রযুক্তি প্রশংসা কুড়িয়েছে।",
+        details: "শহরের ড্রেনেজ ও শিল্পবর্জ্য পানির গুণগত মান তাৎক্ষণিকভাবে পর্যবেক্ষণের জন্য কারিগরি শিক্ষার্থীদের একটি দল আধুনিক আইওটি (IoT) ভিত্তিক সিস্টেম তৈরি করেছে। এই ডিভাইসটি পানির পিএইচ (pH), টার্বিডিটি এবং তাপমাত্রা পরিমাপ করে সরাসরি ক্লাউড ড্যাশবোর্ডে সতর্কবার্তা পাঠাতে সক্ষম।\n\nবিচারকমণ্ডলী ও ইন্ডাস্ট্রি বিশেষজ্ঞরা জানিয়েছেন, কম খরচে তৈরি এই দেশীয় প্রযুক্তিটি স্থানীয় পৌরসভা ও শিল্পাঞ্চলের বর্জ্য ব্যবস্থাপনায় কার্যকর ভূমিকা রাখতে পারবে।",
+        link: "#"
+      }
+    ];
+
+    let articles = [...fallbackArticles];
+    let currentCategory = "All";
+
+    // Pagination settings: Show 6 articles initially on front page, load 6 more on each click
+    const ITEMS_PER_PAGE = 6;
+    let visibleCount = ITEMS_PER_PAGE;
+
+    const homeView = document.getElementById("home-view");
+    const articlePageView = document.getElementById("article-page-view");
+    const latestList = document.getElementById("latest-list");
+    const newsGrid = document.getElementById("news-grid");
+    const activeLabel = document.getElementById("active-label");
+    const filterLinks = document.querySelectorAll(".filter-link");
+    const searchInput = document.getElementById("search-input");
+    const searchBtn = document.getElementById("search-btn");
+    const clearSearchBtn = document.getElementById("clear-search-btn");
+    const loadMoreWrapper = document.getElementById("load-more-wrapper");
+    const loadMoreBtn = document.getElementById("load-more-btn");
+    const newsCountInfo = document.getElementById("news-count-info");
+
+    // Copy share link helper
+    window.copyArticleLink = function(url, btnEl) {
+      navigator.clipboard.writeText(url).then(() => {
+        const originalHtml = btnEl.innerHTML;
+        btnEl.innerHTML = `<i class="bi bi-check2"></i> কপি হয়েছে!`;
+        btnEl.classList.remove("share-copy");
+        btnEl.classList.add("bg-success", "text-white");
+        setTimeout(() => {
+          btnEl.innerHTML = originalHtml;
+          btnEl.classList.remove("bg-success", "text-white");
+          btnEl.classList.add("share-copy");
+        }, 2000);
+      });
+    };
+
+    // Build Share Buttons HTML
+    function buildShareButtons(shareUrl, title) {
+      const encodedUrl = encodeURIComponent(shareUrl);
+      const encodedText = encodeURIComponent(`${title} — TVET Tribune`);
+
+      return `
+        <a href="https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}" target="_blank" class="share-btn share-fb" title="Share on Facebook">
+          <i class="bi bi-facebook"></i> Facebook
+        </a>
+        <a href="https://api.whatsapp.com/send?text=${encodedText}%20${encodedUrl}" target="_blank" class="share-btn share-wa" title="Share on WhatsApp">
+          <i class="bi bi-whatsapp"></i> WhatsApp
+        </a>
+        <a href="https://www.facebook.com/dialog/send?link=${encodedUrl}&app_id=291494419107518&redirect_uri=${encodedUrl}" target="_blank" class="share-btn share-msg" title="Share on Messenger">
+          <i class="bi bi-messenger"></i> Messenger
+        </a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}" target="_blank" class="share-btn share-in" title="Share on LinkedIn">
+          <i class="bi bi-linkedin"></i> LinkedIn
+        </a>
+        <button type="button" class="share-btn share-copy" onclick="copyArticleLink('${shareUrl}', this)" title="Copy Link">
+          <i class="bi bi-link-45deg"></i> Copy Link
+        </button>
+      `;
+    }
+
+    // Open Full-Page Article Reader View
+    window.showNews = function(index) {
+      const item = articles[index];
+      if (!item) return;
+
+      const slugHash = `#news-${index + 1}`;
+      if (window.location.hash !== slugHash) {
+        history.pushState({ articleIndex: index }, "", slugHash);
+      }
+
+      const shareUrl = `${window.location.origin}${window.location.pathname}${slugHash}`;
+
+      document.getElementById("fp-breadcrumb-cat").textContent = item.catBn;
+      document.getElementById("fp-badge").textContent = item.catBn;
+      document.getElementById("fp-title").textContent = item.title;
+      document.getElementById("fp-meta").textContent = `${item.reporter} • প্রকাশিত: ${item.date}`;
+      document.getElementById("fp-summary").textContent = item.summary;
+
+      const paragraphs = (item.details || "")
+        .split(/\n\s*\n/)
+        .filter(p => p.trim() !== "")
+        .map(p => `<p>${p.trim()}</p>`)
+        .join("");
+      document.getElementById("fp-details").innerHTML = paragraphs;
+
+      const shareHtml = buildShareButtons(shareUrl, item.title);
+      document.getElementById("fp-share-top").innerHTML = shareHtml;
+      document.getElementById("fp-share-bottom").innerHTML = shareHtml;
+
+      document.getElementById("fp-image").src = item.image || getDefaultCover(item.catBn);
+
+      const linkBox = document.getElementById("fp-link-box");
+      const linkBtn = document.getElementById("fp-link");
+      if (item.link && item.link !== "#") {
+        linkBtn.href = item.link;
+        linkBox.classList.remove("d-none");
+      } else {
+        linkBox.classList.add("d-none");
+      }
+
+      const relatedList = document.getElementById("fp-related-list");
+      relatedList.innerHTML = articles
+        .map((a, i) => ({ a, i }))
+        .filter(obj => obj.i !== index)
+        .slice(0, 4)
+        .map(obj => `
+          <div class="latest-row" onclick="showNews(${obj.i})">
+            <div class="small text-danger fw-semibold">${obj.a.catBn} • <span class="text-muted fw-normal">${obj.a.date}</span></div>
+            <h5 class="h6 fw-bold mb-0 mt-1">${obj.a.title}</h5>
+          </div>
+        `).join("");
+
+      homeView.classList.add("d-none");
+      articlePageView.classList.remove("d-none");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+
+    // Return to Home Page View
+    window.closeFullArticle = function(event, scrollToSubmit = false) {
+      if (event) event.preventDefault();
+      articlePageView.classList.add("d-none");
+      homeView.classList.remove("d-none");
+
+      if (window.location.hash.startsWith("#news-")) {
+        history.pushState(null, "", window.location.pathname + window.location.search);
+      }
+
+      if (scrollToSubmit) {
+        setTimeout(() => {
+          document.getElementById("submit-news")?.scrollIntoView({ behavior: "smooth" });
+        }, 50);
+      } else {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    };
+
+    function handleRouteChange() {
+      const hash = window.location.hash;
+      if (hash && hash.startsWith("#news-")) {
+        const num = parseInt(hash.replace("#news-", ""), 10);
+        if (!isNaN(num) && num >= 1 && num <= articles.length) {
+          showNews(num - 1);
+          return;
+        }
+      }
+      articlePageView.classList.add("d-none");
+      homeView.classList.remove("d-none");
+    }
+
+    // Render Right Sidebar Latest News (Top 5)
+    function renderLatest() {
+      latestList.innerHTML = articles.slice(0, 5).map((item, idx) => `
+        <div class="latest-row" onclick="showNews(${idx})">
+          <div class="small text-danger fw-semibold">${item.catBn} • <span class="text-muted fw-normal">${item.date}</span></div>
+          <h5 class="h6 fw-bold mb-0 mt-1">${item.title}</h5>
+        </div>
+      `).join("");
+    }
+
+    // Render Bottom Category Grid (Max 6 initially + Load More button)
+    function renderGrid() {
+      const keyword = (searchInput.value || "").toLowerCase().trim();
+
+      if (keyword) {
+        clearSearchBtn.classList.remove("d-none");
+      } else {
+        clearSearchBtn.classList.add("d-none");
+      }
+
+      const filtered = articles.filter(item => {
+        const matchCat = currentCategory === "All" || item.cat === currentCategory;
+        const matchKey = !keyword ||
+          item.title.toLowerCase().includes(keyword) ||
+          item.summary.toLowerCase().includes(keyword) ||
+          item.details.toLowerCase().includes(keyword) ||
+          item.catBn.toLowerCase().includes(keyword) ||
+          item.reporter.toLowerCase().includes(keyword);
+        return matchCat && matchKey;
+      });
+
+      if (filtered.length === 0) {
+        newsGrid.innerHTML = `<div class="col-12 text-center py-4 text-muted">দুঃখিত, "${searchInput.value}" সম্পর্কিত কোনো সংবাদ পাওয়া যায়নি।</div>`;
+        loadMoreWrapper.classList.add("d-none");
+        return;
+      }
+
+      // Slice up to visibleCount (6 by default on front page)
+      const itemsToShow = filtered.slice(0, visibleCount);
+
+      newsGrid.innerHTML = itemsToShow.map(item => {
+        const idx = articles.indexOf(item);
+        const imgSrc = item.image || getDefaultCover(item.catBn);
+        return `
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="news-item h-100 d-flex flex-column justify-content-between" onclick="showNews(${idx})">
+              <div>
+                <img src="${imgSrc}" alt="${item.title}" class="news-card-img">
+                <div class="p-3">
+                  <div class="small text-danger fw-bold mb-1">${item.catBn}</div>
+                  <h3 class="h6 fw-bold mb-2">${item.title}</h3>
+                  <p class="small text-secondary mb-0">${item.summary}</p>
+                </div>
+              </div>
+              <div class="px-3 py-2 bg-light small text-muted border-top d-flex justify-content-between">
+                <span>${item.reporter}</span>
+                <span>${item.date}</span>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join("");
+
+      // Toggle "আরও পড়ুন" (Load More) button visibility
+      if (filtered.length > visibleCount) {
+        loadMoreWrapper.classList.remove("d-none");
+        newsCountInfo.textContent = `দেখানো হচ্ছে ${itemsToShow.length}টি / মোট ${filtered.length}টি সংবাদ`;
+      } else {
+        loadMoreWrapper.classList.add("d-none");
+      }
+    }
+
+    // Load More Button Click: Reveals next 6 articles
+    loadMoreBtn.addEventListener("click", () => {
+      visibleCount += ITEMS_PER_PAGE;
+      renderGrid();
+    });
+
+    function applyAdSlot(elementId, adData) {
+      if (!adData || !adData.active) return;
+      const box = document.getElementById(elementId);
+      if (!box) return;
+      box.innerHTML = `
+        <span class="ad-label">বিজ্ঞাপন (Advertisement)</span>
+        <a href="${adData.link || '#'}" target="_blank" class="text-decoration-none">
+          ${adData.image
+            ? `<img src="${adData.image}" alt="${adData.text}" class="img-fluid rounded" style="max-height:110px;">`
+            : `<div class="fw-bold text-dark small py-2">${adData.text}</div>`}
+        </a>
+      `;
+    }
+
+    // Initial render
+    renderLatest();
+    renderGrid();
+    handleRouteChange();
+
+    // Load live data.json when hosted online
+    fetch("data.json")
+      .then(res => {
+        if (!res.ok) throw new Error("Local file mode");
+        return res.json();
+      })
+      .then(data => {
+        if (Array.isArray(data.articles)) {
+          articles = data.articles;
+        }
+        if (data.featuredVideoId) {
+          document.getElementById("featured-video").src = `https://www.youtube.com/embed/${data.featuredVideoId}`;
+        }
+        if (data.leadTitle) document.getElementById("lead-title").textContent = data.leadTitle;
+        if (data.leadSummary) document.getElementById("lead-summary").textContent = data.leadSummary;
+
+        if (data.ads) {
+          applyAdSlot("ad-top-banner", data.ads.topBanner);
+          applyAdSlot("ad-sidebar-box", data.ads.sidebarBox);
+          applyAdSlot("ad-mid-banner", data.ads.midBanner);
+        }
+
+        renderLatest();
+        renderGrid();
+        handleRouteChange();
+      })
+      .catch(() => {});
+
+    window.addEventListener("popstate", handleRouteChange);
+    window.addEventListener("hashchange", handleRouteChange);
+
+    // Category Navigation Click (Resets visibleCount back to 6)
+    filterLinks.forEach(link => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        filterLinks.forEach(l => l.classList.remove("active"));
+        link.classList.add("active");
+        currentCategory = link.getAttribute("data-cat");
+        activeLabel.textContent = `বিভাগ: ${link.textContent}`;
+        visibleCount = ITEMS_PER_PAGE;
+
+        articlePageView.classList.add("d-none");
+        homeView.classList.remove("d-none");
+        if (window.location.hash.startsWith("#news-")) {
+          history.pushState(null, "", window.location.pathname + window.location.search);
+        }
+
+        renderGrid();
+        document.getElementById("all-news").scrollIntoView({ behavior: "smooth" });
+      });
+    });
+
+    // Search Events (Resets visibleCount back to 6 on new query)
+    searchInput.addEventListener("input", () => {
+      visibleCount = ITEMS_PER_PAGE;
+      if (!articlePageView.classList.contains("d-none")) {
+        articlePageView.classList.add("d-none");
+        homeView.classList.remove("d-none");
+      }
+      renderGrid();
+    });
+
+    searchBtn.addEventListener("click", () => {
+      visibleCount = ITEMS_PER_PAGE;
+      articlePageView.classList.add("d-none");
+      homeView.classList.remove("d-none");
+      renderGrid();
+      document.getElementById("all-news").scrollIntoView({ behavior: "smooth" });
+    });
+
+    clearSearchBtn.addEventListener("click", () => {
+      searchInput.value = "";
+      visibleCount = ITEMS_PER_PAGE;
+      renderGrid();
+    });
+  </script>
+</body>
+</html>
