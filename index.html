@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="bn">
 <head>
@@ -281,15 +280,15 @@
       cursor: pointer;
     }
 
-    /* Ad Banner System */
-    .ad-wrapper {
+    /* Sponsor / Promo Banner System (AdBlocker-Safe Class Names) */
+    .promo-wrapper {
       margin: 18px auto;
       display: flex;
       justify-content: center;
       align-items: center;
     }
 
-    .ad-link-box {
+    .promo-link-box {
       display: block;
       width: 100%;
       max-width: 728px;
@@ -297,11 +296,11 @@
       overflow: hidden;
     }
 
-    .ad-link-box.sidebar-ad-box {
+    .promo-link-box.sidebar-promo-box {
       max-width: 300px;
     }
 
-    .ad-link-box img {
+    .promo-link-box img {
       display: block;
       width: 100%;
       height: auto;
@@ -310,8 +309,8 @@
       border-radius: 8px;
     }
 
-    .ad-text-placeholder {
-      background: rgba(255, 255, 255, 0.9);
+    .promo-text-placeholder {
+      background: rgba(255, 255, 255, 0.92);
       border: 1px dashed #94a3b8;
       color: var(--text-muted);
       text-align: center;
@@ -366,7 +365,7 @@
       100% { transform: translateX(-100%); }
     }
 
-    /* Full-Page Article Reader Mode (1. Main Article First -> 2. Share & Copy Link -> 3. "আরও পড়ুন") */
+    /* Full-Page Article Reader Mode */
     .article-reader-wrapper {
       display: none;
       margin-bottom: 34px;
@@ -1028,9 +1027,9 @@
     </nav>
   </div>
 
-  <!-- Top Ad Slot (728x90 px) -->
+  <!-- Top Promo / Sponsor Banner Slot (728x90 px) -->
   <div class="container">
-    <div id="topAdSlot" class="ad-wrapper"></div>
+    <div id="topSponsorSlot" class="promo-wrapper"></div>
   </div>
 
   <!-- Breaking News Ticker ("শিরোনাম") -->
@@ -1118,8 +1117,8 @@
             </div>
           </article>
 
-          <!-- Mid Ad Slot (728x90 px) -->
-          <div id="midAdSlot" class="ad-wrapper"></div>
+          <!-- Mid Promo / Sponsor Banner Slot (728x90 px) -->
+          <div id="midSponsorSlot" class="promo-wrapper"></div>
         </div>
 
         <!-- Right Sidebar Column (Appears FIRST on Mobile) -->
@@ -1131,8 +1130,8 @@
             <ul class="latest-list" id="latestSidebarList"></ul>
           </div>
 
-          <!-- Sidebar Ad Slot (300x250 px) -->
-          <div id="sidebarAdSlot" class="ad-wrapper" style="margin-top:20px;"></div>
+          <!-- Sidebar Promo / Sponsor Box Slot (300x250 px) -->
+          <div id="sidebarSponsorSlot" class="promo-wrapper" style="margin-top:20px;"></div>
         </aside>
       </div>
 
@@ -1236,7 +1235,7 @@
           desk: "টেক ও গবেষণা ডেস্ক"
         },
         {
-          title: "পলিটেকনিক শিক্ষার্থীদের উদ্ভাবিত স্মার্ট ওয়াটার মনিটরিং সিস্টেম 'DrainSense'-এর লাইভ ডেমো",
+          title: "পলিটেকনিক শিক্ষার্থীদের উদ্ভাবিত স্মার্ট ওয়াটার মনিটরিং সিস্টেম DrainSense-এর লাইভ ডেমো",
           videoUrl: "aqz-KE-bpKQ",
           date: "১১ নভেম্বর ২০২৬",
           desk: "উদ্ভাবন ডেস্ক"
@@ -1255,42 +1254,72 @@
       },
       articles: [
         {
-          title: "পলিটেকনিক শিক্ষার্থীদের উদ্ভাবিত স্মার্ট ওয়াটার মনিটরিং সিস্টেম 'DrainSense' জাতীয় পুরস্কারে ভূষিত",
-          reporter: "উদ্ভাবন ডেস্ক",
+          title: "স্মার্ট গ্রিড ও নবায়নযোগ্য জ্বালানি ব্যবস্থাপনায় পলিটেকনিক শিক্ষার্থীদের নতুন গবেষণা প্রকল্প",
+          cat: "Tech & Research",
+          reporter: "গবেষণা ডেস্ক",
           image: "",
-          details: "শহরের ড্রেনেজ ও শিল্পবর্জ্য পানির গুণগত মান তাৎক্ষণিকভাবে পর্যবেক্ষণের জন্য কারিগরি শিক্ষার্থীদের একটি দল আধুনিক আইওটি (IoT) ভিত্তিক সিস্টেম তৈরি করেছে। ESP32 ও STM32 মাইক্রোকন্ট্রোলার এবং মাল্টি-প্যারামিটার সেন্সর ব্যবহার করে তৈরি এই পরিবেশবান্ধব বর্জ্যপানি পর্যবেক্ষণ প্রযুক্তিটি জাতীয় পর্যায়ে প্রশংসা কুড়িয়েছে।",
+          details: "দেশের ক্রমবর্ধমান বিদ্যুৎ চাহিদা ও লোডশেডিং মোকাবিলায় কম খরচে স্মার্ট সোলার মাইক্রোগ্রিড কন্ট্রোলার তৈরি করেছেন পলিটেকনিক ইনস্টিটিউটের একদল শিক্ষার্থী। সৌরবিদ্যুৎ ও ব্যাটারি স্টোরেজ সিস্টেমের স্বয়ংক্রিয় লোড ব্যালেন্সিং নিয়ে কাজ করছেন ইলেকট্রিক্যাল ও ইলেকট্রনিক্স টেকনোলজির শিক্ষার্থীরা।",
           link: "#"
         },
         {
-          title": "ডুয়েট (DUET) ভর্তি প্রস্তুতি ও ইন্ডাস্ট্রিয়াল অ্যাটাচমেন্ট নির্বাচন নির্দেশিকা ২০২৬",
+          title: "দেশের শীর্ষস্থানীয় আইএসপি ও টেলিকম প্রতিষ্ঠানে নেটওয়ার্ক ইঞ্জিনিয়ার পদে ইন্টার্নশিপের সুযোগ",
+          cat: "Job Placement",
+          reporter: "জব ডেস্ক",
+          image: "",
+          details: "কম্পিউটার ও টেলিকমিউনিকেশন টেকনোলজির অষ্টম পর্বের শিক্ষার্থীদের জন্য ৩ মাসব্যাপী পেইড ইন্ডাস্ট্রিয়াল ইন্টার্নশিপ ঘোষণা করা হয়েছে। রাউটিং, সুইচিং, ওএলটি কনফিগারেশন, ফাইবার অপটিক স্প্লাইসিং এবং সার্ভার রক্ষণাবেক্ষণে আগ্রহী ডিপ্লোমা শিক্ষার্থীদের কাছ থেকে আবেদন আহ্বান করা হয়েছে।",
+          link: "#"
+        },
+        {
+          title: "পলিটেকনিক শিক্ষার্থীদের উদ্ভাবিত স্মার্ট ওয়াটার মনিটরিং সিস্টেম DrainSense জাতীয় পুরস্কারে ভূষিত",
+          cat: "Tech & Research",
+          reporter: "উদ্ভাবন ডেস্ক",
+          image: "",
+          details: "শহরের ড্রেনেজ ও শিল্পবর্জ্য পানির গুণগত মান তাৎক্ষণিকভাবে পর্যবেক্ষণের জন্য কারিগরি শিক্ষার্থীদের একটি দল আধুনিক আইওটি (IoT) ভিত্তিক সিস্টেম তৈরি করেছে। ESP32 ও STM32 মাইক্রোকন্ট্রোলার এবং মাল্টি-প্যারামিটার সেন্সর ব্যবহার করে তৈরি এই পরিবেশবান্ধব বর্জ্যপানি পর্যবেক্ষণ প্রযুক্তিটি প্রশংসা কুড়িয়েছে।",
+          link: "#"
+        },
+        {
+          title: "ডুয়েট (DUET) ভর্তি প্রস্তুতি ও ইন্ডাস্ট্রিয়াল অ্যাটাচমেন্ট নির্বাচন নির্দেশিকা ২০২৬",
+          cat: "Training",
           reporter: "ক্যারিয়ার ডেস্ক",
           image: "",
           details: "ডিপ্লোমা-ইন-ইঞ্জিনিয়ারিংয়ের অষ্টম পর্বের শিক্ষার্থীদের জন্য ইন্ডাস্ট্রিয়াল অ্যাটাচমেন্ট একটি অত্যন্ত গুরুত্বপূর্ণ অধ্যায়। পাশাপাশি যারা উচ্চশিক্ষার জন্য ঢাকা প্রকৌশল ও প্রযুক্তি বিশ্ববিদ্যালয় (DUET) ভর্তি পরীক্ষায় অংশ নিতে চান, তাদের জন্য অ্যাটাচমেন্ট চলাকালীন সময় থেকেই পদার্থবিজ্ঞান, রসায়ন ও গণিতের নিয়মিত চর্চা করা জরুরি।",
           link: "#"
         },
         {
-          title": "মাঠ পর্যায়ের টেস্ট: এক্সটার্নাল অ্যান্টেনাযুক্ত 4G LTE রাউটার বনাম সাধারণ ইনডোর রাউটার",
+          title: "মাঠ পর্যায়ের টেস্ট: এক্সটার্নাল অ্যান্টেনাযুক্ত 4G LTE রাউটার বনাম সাধারণ ইনডোর রাউটার",
+          cat: "Tech & Research",
           reporter: "টেক ডেস্ক",
           image: "",
           details: "শহরের ঘনবসতিপূর্ণ কংক্রিট ভবন কিংবা দূরবর্তী ইন্ডাস্ট্রিয়াল ল্যাবে মোবাইল সিমের নেটওয়ার্ক দুর্বল থাকায় অনেকেই নিরবচ্ছিন্ন ইন্টারনেট সংযোগ পান না। এই সমস্যা সমাধানে রিমুভেবল SMA কো-অ্যাক্সিয়াল অ্যান্টেনাযুক্ত 4G LTE রাউটার এবং সাধারণ ইনডোর রাউটারের মধ্যে সরাসরি মাঠ পর্যায়ের তুলনামূলক পরীক্ষা চালানো হয়েছে।",
           link: "https://youtube.com"
         },
         {
-          title": "NSDA CBT&A লেভেল-৩ ও ৪ ট্রেইনার এবং অ্যাসেসর নিবন্ধন বিজ্ঞপ্তি",
+          title: "NSDA CBT&A লেভেল-৩ ও ৪ ট্রেইনার এবং অ্যাসেসর নিবন্ধন বিজ্ঞপ্তি",
+          cat: "Training",
           reporter: "প্রশিক্ষণ ডেস্ক",
           image: "",
           details: "জাতীয় দক্ষতা উন্নয়ন কর্তৃপক্ষ (NSDA) দেশের কারিগরি প্রশিক্ষণ কেন্দ্রগুলোর মানোন্নয়নের লক্ষ্যে আইটি সাপোর্ট সার্ভিস, ওয়েব ডিজাইন, ইলেকট্রিক্যাল ইনস্টলেশন এবং গ্রাফিক ডিজাইন অকুপেশনে নতুন করে ট্রেইনার ও অ্যাসেসর নিবন্ধনের আহ্বান জানিয়েছে।",
           link: "https://nsda.gov.bd"
         },
         {
-          title": "১০ম গ্রেড উপ-সহকারী প্রকৌশলী (SAE) নিয়োগ ও প্রাইভেট সেক্টরে জব সার্কুলার",
+          title: "১০ম গ্রেড উপ-সহকারী প্রকৌশলী (SAE) নিয়োগ ও প্রাইভেট সেক্টরে জব সার্কুলার",
+          cat: "Job Placement",
           reporter: "জব প্লেসমেন্ট ডেস্ক",
           image: "",
           details: "সদ্য ডিপ্লোমা-ইন-ইঞ্জিনিয়ারিং পাস করা শিক্ষার্থীদের কর্মসংস্থানের লক্ষ্যে চলতি সপ্তাহের সরকারি ও বেসরকারি নিয়োগ বিজ্ঞপ্তিগুলো একত্রিত করা হয়েছে। বাস্তব ল্যাব, নেটওয়ার্কিং ও হার্ডওয়্যার ট্রাবলশুটিংয়ে দক্ষতা থাকলে প্রার্থীরা অগ্রাধিকার পাবেন।",
           link: "#"
         },
         {
-          title": "বিটিইবি ডিপ্লোমা-ইন-ইঞ্জিনিয়ারিং সেমিস্টার পরীক্ষার রুটিন ও ফরম ফিলাপের বিজ্ঞপ্তি প্রকাশ",
+          title: "ল্যাব আধুনিকায়ন ও বকেয়া বৃত্তির দাবিতে পলিটেকনিক শিক্ষার্থীদের ৬ দফা স্মারকলিপি পেশ",
+          cat: "Campus Politics",
+          reporter: "ক্যাম্পাস ডেস্ক",
+          image: "",
+          details: "বৃহস্পতিবার সকালে ক্যাম্পাসের প্রশাসনিক ভবনের সামনে বিভিন্ন টেকনোলজির শিক্ষার্থীরা সমবেত হয়ে শান্তিপূর্ণ অবস্থান কর্মসূচি পালন করেন। আধুনিক ওয়ার্কশপ সরঞ্জাম সরবরাহ, শিক্ষক সংকট নিরসন এবং সেমিস্টার বৃত্তির অর্থ দ্রুত ছাড়ের দাবিতে অধ্যক্ষ বরাবর ৬ দফা স্মারকলিপি দিয়েছেন সাধারণ শিক্ষার্থীরা।",
+          link: "#"
+        },
+        {
+          title: "বিটিইবি ডিপ্লোমা-ইন-ইঞ্জিনিয়ারিং সেমিস্টার পরীক্ষার রুটিন ও ফরম ফিলাপের বিজ্ঞপ্তি প্রকাশ",
+          cat: "Notices",
           reporter: "নোটিশ ডেস্ক",
           image: "",
           details: "বাংলাদেশ কারিগরি শিক্ষা বোর্ডের (BTEB) পরীক্ষা নিয়ন্ত্রক দপ্তর থেকে প্রকাশিত এক জরুরি বিজ্ঞপ্তিতে জানানো হয়েছে, ২০২৬ সালের ডিপ্লোমা-ইন-ইঞ্জিনিয়ারিং শিক্ষাক্রমের নিয়মিত ও অনিয়মিত পর্বের পরীক্ষার সময়সূচি চূড়ান্ত করা হয়েছে। মূল রুটিন ও ফি কাঠামোর অফিশিয়াল পিডিএফ কপি নিচের লিংক থেকে সরাসরি ডাউনলোড করা যাবে।",
@@ -1306,21 +1335,23 @@
     let activeArticleTitle = '';
 
     function setAutoEditorialDates() {
-      const now = new Date();
-      const dateStr = new Intl.DateTimeFormat('bn-BD', {
-        timeZone: 'Asia/Dhaka',
-        weekday: 'long',
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
-      }).format(now);
-      document.getElementById('autoTodayDate').textContent = dateStr;
+      try {
+        const now = new Date();
+        const dateStr = new Intl.DateTimeFormat('bn-BD', {
+          timeZone: 'Asia/Dhaka',
+          weekday: 'long',
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        }).format(now);
+        document.getElementById('autoTodayDate').textContent = dateStr;
 
-      const yearBn = new Intl.DateTimeFormat('bn-BD', {
-        timeZone: 'Asia/Dhaka',
-        year: 'numeric'
-      }).format(now);
-      document.getElementById('footerYear').textContent = yearBn;
+        const yearBn = new Intl.DateTimeFormat('bn-BD', {
+          timeZone: 'Asia/Dhaka',
+          year: 'numeric'
+        }).format(now);
+        document.getElementById('footerYear').textContent = yearBn;
+      } catch (e) {}
     }
     setAutoEditorialDates();
 
@@ -1368,30 +1399,32 @@
       return dateStr;
     }
 
-    function renderAdSlot(containerId, adData, isSidebar = false) {
+    function renderSponsorSlot(containerId, adData, isSidebar) {
       const container = document.getElementById(containerId);
-      if (!container || !adData || !adData.active) {
-        if (container) container.style.display = 'none';
+      if (!container) return;
+      if (!adData || adData.active === false) {
+        container.style.display = 'none';
         return;
       }
 
+      container.style.display = 'flex';
       const rawLink = (adData.link || '').trim();
       const hasValidLink = rawLink && rawLink !== '#';
       const isInternalAnchor = rawLink.startsWith('#');
       const finalHref = hasValidLink ? rawLink : '#submit-news';
       const targetAttr = (!isInternalAnchor && hasValidLink) ? 'target="_blank" rel="noopener noreferrer"' : '';
-      const boxClass = isSidebar ? 'ad-link-box sidebar-ad-box' : 'ad-link-box';
+      const boxClass = isSidebar ? 'promo-link-box sidebar-promo-box' : 'promo-link-box';
 
       if (adData.image && adData.image.trim() !== '') {
         container.innerHTML = `
           <a href="${finalHref}" ${targetAttr} class="${boxClass}">
-            <img src="${adData.image}" alt="Advertisement" />
+            <img src="${adData.image}" alt="Featured Banner" />
           </a>
         `;
       } else {
         container.innerHTML = `
           <a href="${finalHref}" ${targetAttr} class="${boxClass}">
-            <div class="ad-text-placeholder">${adData.text || 'বিজ্ঞাপনের স্থান'}</div>
+            <div class="promo-text-placeholder">${adData.text || 'বিজ্ঞাপনের স্থান'}</div>
           </a>
         `;
       }
@@ -1474,6 +1507,7 @@
         return;
       }
       hasExclusiveVideos = true;
+      section.style.display = 'block';
       const threeVideos = videos.slice().reverse().slice(0, 3);
       grid.innerHTML = threeVideos.map(vid => {
         const vidId = extractYouTubeId(vid.videoUrl);
@@ -1513,7 +1547,9 @@
       if (btnElement) btnElement.classList.add('active');
 
       document.getElementById('navLinks').classList.remove('show');
-      window.history.replaceState(null, '', window.location.pathname);
+      if (window.location.protocol !== 'file:') {
+        window.history.replaceState(null, '', window.location.pathname);
+      }
 
       const filtered = cat === 'ALL'
         ? allArticles
@@ -1596,10 +1632,9 @@
       document.getElementById('readMoreGrid').innerHTML = relatedLatest.map(item => buildCardHtml(item)).join('');
 
       document.title = `${art.title} | TVET Tribune`;
-      document.getElementById('og-title').setAttribute('content', art.title);
-      document.getElementById('og-description').setAttribute('content', (art.details || art.summary || '').slice(0, 160));
-      if (art.image) document.getElementById('og-image').setAttribute('content', window.location.origin + art.image);
-      window.history.replaceState(null, '', `#news-${uid}`);
+      if (window.location.protocol !== 'file:') {
+        window.history.replaceState(null, '', `#news-${uid}`);
+      }
 
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
@@ -1611,7 +1646,9 @@
         document.getElementById('heroEditorialGrid').style.display = 'grid';
       }
       document.title = 'TVET Tribune | কারিগরি ও প্রকৌশল শিক্ষার নির্ভরযোগ্য সংবাদমাধ্যম';
-      window.history.replaceState(null, '', window.location.pathname);
+      if (window.location.protocol !== 'file:') {
+        window.history.replaceState(null, '', window.location.pathname);
+      }
     }
 
     function shareToFacebook() {
@@ -1636,9 +1673,13 @@
     }
 
     function copyShareLink() {
-      navigator.clipboard.writeText(window.location.href).then(() => {
-        alert('সংবাদটির নিজস্ব লিংক কপি হয়েছে!');
-      });
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(window.location.href).then(() => {
+          alert('সংবাদটির নিজস্ব লিংক কপি হয়েছে!');
+        });
+      } else {
+        alert('লিংক: ' + window.location.href);
+      }
     }
 
     window.addEventListener('resize', () => {
@@ -1651,28 +1692,31 @@
     });
 
     function applyPortalData(data) {
-      const mainVidId = extractYouTubeId(data.featuredVideoId);
+      const safeData = data || FALLBACK_PORTAL_DATA;
+
+      const mainVidId = extractYouTubeId(safeData.featuredVideoId || FALLBACK_PORTAL_DATA.featuredVideoId);
       if (mainVidId) {
         document.getElementById('featuredVideoFrame').src = `https://www.youtube.com/embed/${mainVidId}`;
       }
-      document.getElementById('leadTitle').textContent = data.leadTitle || '';
-      document.getElementById('featuredReporter').textContent = data.featuredReporter || 'টিভেট ট্রিবিউন ডেস্ক';
-      document.getElementById('leadSummary').textContent = data.leadSummary || '';
+      document.getElementById('leadTitle').textContent = safeData.leadTitle || FALLBACK_PORTAL_DATA.leadTitle;
+      document.getElementById('featuredReporter').textContent = safeData.featuredReporter || FALLBACK_PORTAL_DATA.featuredReporter;
+      document.getElementById('leadSummary').textContent = safeData.leadSummary || FALLBACK_PORTAL_DATA.leadSummary;
 
-      if (data.socialLinks) {
-        if (data.socialLinks.youtube) document.getElementById('socialYoutube').href = data.socialLinks.youtube;
-        if (data.socialLinks.facebook) document.getElementById('socialFacebook').href = data.socialLinks.facebook;
-        if (data.socialLinks.linkedin) document.getElementById('socialLinkedin').href = data.socialLinks.linkedin;
-      }
+      const social = safeData.socialLinks || FALLBACK_PORTAL_DATA.socialLinks;
+      if (social.youtube) document.getElementById('socialYoutube').href = social.youtube;
+      if (social.facebook) document.getElementById('socialFacebook').href = social.facebook;
+      if (social.linkedin) document.getElementById('socialLinkedin').href = social.linkedin;
 
-      if (data.ads) {
-        renderAdSlot('topAdSlot', data.ads.topBanner, false);
-        renderAdSlot('midAdSlot', data.ads.midBanner, false);
-        renderAdSlot('sidebarAdSlot', data.ads.sidebarBox, true);
-      }
+      const adsData = (safeData.ads && (safeData.ads.topBanner || safeData.ads.sidebarBox || safeData.ads.midBanner))
+        ? safeData.ads
+        : FALLBACK_PORTAL_DATA.ads;
 
-      const rawArticles = Array.isArray(data.articles) && data.articles.length > 0
-        ? data.articles
+      renderSponsorSlot('topSponsorSlot', adsData.topBanner || FALLBACK_PORTAL_DATA.ads.topBanner, false);
+      renderSponsorSlot('midSponsorSlot', adsData.midBanner || FALLBACK_PORTAL_DATA.ads.midBanner, false);
+      renderSponsorSlot('sidebarSponsorSlot', adsData.sidebarBox || FALLBACK_PORTAL_DATA.ads.sidebarBox, true);
+
+      const rawArticles = (Array.isArray(safeData.articles) && safeData.articles.length > 0)
+        ? safeData.articles
         : FALLBACK_PORTAL_DATA.articles;
 
       allArticles = rawArticles.map((item, index) => ({ ...item, _uid: index + 1 })).reverse();
@@ -1682,7 +1726,11 @@
 
       renderArticles(allArticles);
       renderLatestSidebar(allArticles);
-      renderExclusiveVideos(data.exclusiveVideos || FALLBACK_PORTAL_DATA.exclusiveVideos);
+
+      const videos = (Array.isArray(safeData.exclusiveVideos) && safeData.exclusiveVideos.length > 0)
+        ? safeData.exclusiveVideos
+        : FALLBACK_PORTAL_DATA.exclusiveVideos;
+      renderExclusiveVideos(videos);
 
       const hash = window.location.hash;
       if (hash.startsWith('#news-')) {
@@ -1692,15 +1740,20 @@
     }
 
     async function initPortal() {
+      // 1. Always render built-in fallback data immediately (works 100% offline via file://)
       applyPortalData(FALLBACK_PORTAL_DATA);
-      try {
-        const res = await fetch(`data.json?v=${Date.now()}`);
-        if (res.ok) {
-          const liveData = await res.json();
-          applyPortalData(liveData);
+
+      // 2. Only fetch external data.json when hosted over http/https (Netlify / GitHub Pages)
+      if (window.location.protocol.startsWith('http')) {
+        try {
+          const res = await fetch(`data.json?v=${Date.now()}`);
+          if (res.ok) {
+            const liveData = await res.json();
+            applyPortalData(liveData);
+          }
+        } catch (err) {
+          console.warn('Using fallback portal data:', err);
         }
-      } catch (err) {
-        console.warn('Using built-in sample data:', err);
       }
     }
 
