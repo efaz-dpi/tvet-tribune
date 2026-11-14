@@ -114,6 +114,22 @@ content:
             label: খবরের শিরোনাম
             type: string
             required: true
+          - name: cat
+            label: বিভাগ নির্বাচন করুন (Category)
+            type: select
+            required: true
+            options:
+              values:
+                - value: Notices
+                  label: নোটিশ (Notices)
+                - value: Training
+                  label: প্রশিক্ষণ ও ডুয়েট (Training)
+                - value: Job Placement
+                  label: জব প্লেসমেন্ট (Job Placement)
+                - value: Campus Politics
+                  label: ক্যাম্পাস (Campus Politics)
+                - value: Tech & Research
+                  label: প্রযুক্তি ও গবেষণা (Tech & Research)
           - name: reporter
             label: প্রতিবেদকের নাম
             type: string
