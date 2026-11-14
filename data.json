@@ -8,6 +8,9 @@
     "facebook": "https://facebook.com",
     "linkedin": "https://linkedin.com"
   },
+  "exclusiveVideos": [
+    {}
+  ],
   "ads": {
     "topBanner": {
       "active": true,
