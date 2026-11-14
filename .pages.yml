@@ -130,6 +130,9 @@ content:
                   label: ক্যাম্পাস (Campus Politics)
                 - value: Tech & Research
                   label: প্রযুক্তি ও গবেষণা (Tech & Research)
+          - name: date
+            label: প্রকাশের তারিখ (যেমন: ১৪ নভেম্বর ২০২৬)
+            type: string
           - name: reporter
             label: প্রতিবেদকের নাম
             type: string
