@@ -8,6 +8,13 @@
     "facebook": "https://facebook.com",
     "linkedin": "https://linkedin.com"
   },
+  "exclusiveVideos": [
+    {
+      "title": "কারিগরি শিক্ষায় এখনো পিছিয়ে বেসরকারি প্রতিষ্ঠা",
+      "videoUrl": "https://youtu.be/APBvIM6Z5k0?si=ug1XvxRoueX9WSV0",
+      "desk": "এখন টিভি থেকে সংগ্রহীত"
+    }
+  ],
   "ads": {
     "topBanner": {
       "active": false,
