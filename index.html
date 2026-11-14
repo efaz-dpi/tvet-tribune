@@ -15,29 +15,32 @@
   <meta id="og-url" property="og:url" content="" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Formal Newspaper Font: SolaimanLipi (Web Font + System Fallback) -->
+  <!-- Formal Newspaper Font: SolaimanLipi + Hind Siliguri Fallback -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://fonts.maateen.me/solaiman-lipi/font.css" />
 
   <style>
     :root {
-      --red-primary: #dc2626;      /* Crisp Editorial Red Accent */
-      --red-hover: #b91c1c;        /* Deep Crimson Hover */
-      --red-soft: #fef2f2;         /* Soft Rose-Tint Surface */
-      --red-border: #fecaca;       /* Subtle Red Border */
-      --charcoal-light: #334155;   /* Light Charcoal Slate Base */
-      --charcoal-mid: #475569;     /* Soft Slate Hover */
-      --ink-dark: #1e293b;         /* Eye-Comfort Charcoal Text */
-      --text-muted: #64748b;       /* Muted Slate Gray */
-      --border-light: #e2e8f0;     /* Subtle Clean Border */
-      --offwhite-bg: #f8f7f5;      /* Warm Off-White Base */
-      --card-bg: #ffffff;          /* Pure Clean Card Surface */
+      --red-primary: #dc2626;
+      --red-hover: #b91c1c;
+      --red-soft: #fef2f2;
+      --red-border: #fecaca;
+      --charcoal-light: #334155;
+      --charcoal-mid: #475569;
+      --ink-dark: #1e293b;
+      --text-muted: #64748b;
+      --border-light: #e2e8f0;
+      --offwhite-bg: #f8f7f5;
+      --card-bg: #ffffff;
     }
 
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: 'SolaimanLipi', Arial, sans-serif;
+      font-family: 'SolaimanLipi', 'Hind Siliguri', Arial, sans-serif;
     }
 
     body {
@@ -118,7 +121,7 @@
       gap: 14px;
     }
 
-    /* Social Media Icons (YouTube, Facebook, LinkedIn) */
+    /* Social Media Icons */
     .social-icons {
       display: flex;
       align-items: center;
@@ -194,7 +197,7 @@
       background: var(--red-hover);
     }
 
-    /* Boxed Navigation Bar (With Left & Right Container Margin) */
+    /* Boxed Navigation Bar */
     .nav-wrapper {
       position: sticky;
       top: 10px;
@@ -318,7 +321,7 @@
       border-radius: 8px;
     }
 
-    /* Breaking News Ticker ("শিরোনাম") */
+    /* Breaking News Ticker */
     .ticker-bar {
       background: var(--card-bg);
       border: 1px solid var(--border-light);
@@ -426,7 +429,7 @@
       margin-bottom: 24px;
     }
 
-    /* 4-Button Social Share Bar (Facebook, Messenger, WhatsApp, Copy Link) */
+    /* 4-Button Social Share Bar */
     .share-section {
       border-top: 1px solid var(--border-light);
       padding-top: 18px;
@@ -466,29 +469,14 @@
       fill: currentColor;
     }
 
-    .btn-fb {
-      background: #1877f2;
-      color: #ffffff;
-    }
-    .btn-fb:hover {
-      background: #166fe5;
-    }
+    .btn-fb { background: #1877f2; color: #ffffff; }
+    .btn-fb:hover { background: #166fe5; }
 
-    .btn-msg {
-      background: #0084ff;
-      color: #ffffff;
-    }
-    .btn-msg:hover {
-      background: #0073e6;
-    }
+    .btn-msg { background: #0084ff; color: #ffffff; }
+    .btn-msg:hover { background: #0073e6; }
 
-    .btn-wa {
-      background: #25d366;
-      color: #ffffff;
-    }
-    .btn-wa:hover {
-      background: #1ebe5d;
-    }
+    .btn-wa { background: #25d366; color: #ffffff; }
+    .btn-wa:hover { background: #1ebe5d; }
 
     .btn-copy {
       background: var(--red-soft);
@@ -745,7 +733,7 @@
       margin-top: 24px;
     }
 
-    /* Simple Clean Exclusive Videos Section (3 Videos) */
+    /* Exclusive Videos Section */
     .exclusive-section {
       margin-bottom: 36px;
     }
@@ -1005,7 +993,6 @@
       </a>
 
       <div class="header-right">
-        <!-- YouTube, Facebook & LinkedIn Icons -->
         <div class="social-icons">
           <a id="socialYoutube" href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-link" title="YouTube" aria-label="YouTube">
             <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
@@ -1026,7 +1013,7 @@
     </div>
   </header>
 
-  <!-- Boxed Navigation Bar (With Left & Right Container Margin) -->
+  <!-- Boxed Navigation Bar -->
   <div class="container nav-wrapper">
     <nav class="main-nav">
       <div class="nav-inner">
@@ -1049,12 +1036,12 @@
     </nav>
   </div>
 
-  <!-- Top Promo / Sponsor Banner Slot (728x90 px) -->
+  <!-- Top Promo / Sponsor Banner Slot -->
   <div class="container">
     <div id="topSponsorSlot" class="promo-wrapper"></div>
   </div>
 
-  <!-- Breaking News Ticker ("শিরোনাম") -->
+  <!-- Breaking News Ticker -->
   <div class="container">
     <div class="ticker-bar">
       <div class="ticker-label">শিরোনাম</div>
@@ -1067,9 +1054,8 @@
   <!-- Main Content Container -->
   <main class="container">
 
-    <!-- Full-Page Article Reader View -->
+    <!-- Full-Page Article Reader View (1. Main News -> 2. Share & Copy Link -> 3. "আরও পড়ুন") -->
     <section class="article-reader-wrapper" id="articleReaderWrapper">
-      <!-- 1. Main Article Content -->
       <article class="article-reader-card">
         <button type="button" class="btn-back-list" onclick="closeReaderView()">← মূল পাতায় ফিরে যান</button>
         <h1 class="reader-title" id="readerTitle"></h1>
@@ -1081,7 +1067,7 @@
           <a id="readerExternalLink" href="#" target="_blank" rel="noopener noreferrer" class="btn-share-social btn-copy" style="display:none;">অফিশিয়াল লিংক / PDF দেখুন ↗</a>
         </div>
 
-        <!-- 2. Share & Copy Link Buttons (Includes Headline + Direct Link) -->
+        <!-- 4 Share Buttons -->
         <div class="share-section">
           <div class="share-label">সংবাদটি শেয়ার করুন:</div>
           <div class="share-buttons-row">
@@ -1108,7 +1094,7 @@
         </div>
       </article>
 
-      <!-- 3. "আরও পড়ুন" Section (Latest News Cards right below Share Buttons) -->
+      <!-- "আরও পড়ুন" Section -->
       <div class="read-more-block">
         <div class="section-header">
           <h2 class="section-title">আরও পড়ুন</h2>
@@ -1119,11 +1105,9 @@
 
     <!-- Portal Home / Category View Wrapper -->
     <div id="portalHomeView">
-      <!-- Main Editorial Section (Mobile: Latest News First, Lead YouTube Video Second) -->
       <div class="main-grid" id="heroEditorialGrid">
         <!-- Primary Column -->
         <div class="primary-col">
-          <!-- Featured Video & Lead Report -->
           <article class="lead-card" id="leadVideoSection">
             <div class="video-frame-wrapper">
               <iframe id="featuredVideoFrame" src="" title="Featured Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -1139,7 +1123,6 @@
             </div>
           </article>
 
-          <!-- Mid Promo / Sponsor Banner Slot (728x90 px) -->
           <div id="midSponsorSlot" class="promo-wrapper"></div>
         </div>
 
@@ -1152,12 +1135,11 @@
             <ul class="latest-list" id="latestSidebarList"></ul>
           </div>
 
-          <!-- Sidebar Promo / Sponsor Box Slot (300x250 px) -->
           <div id="sidebarSponsorSlot" class="promo-wrapper" style="margin-top:20px;"></div>
         </aside>
       </div>
 
-      <!-- All News Section (Equal-Height Cards with Drop Shadow) -->
+      <!-- All News Section -->
       <section class="all-news-section" id="allNewsSection">
         <div class="section-header">
           <h2 class="section-title" id="gridHeading">সকল সংবাদ ও নোটিশ</h2>
@@ -1168,7 +1150,7 @@
         </div>
       </section>
 
-      <!-- Simple Exclusive Videos Section (3 Videos) -->
+      <!-- Exclusive Videos Section -->
       <section class="exclusive-section" id="exclusiveVideosSection">
         <div class="section-header">
           <h2 class="section-title">এক্সক্লুসিভ ভিডিও</h2>
@@ -1177,14 +1159,14 @@
       </section>
     </div>
 
-    <!-- Submit News Section at Very Bottom (Above Footer) -->
+    <!-- Submit News Section -->
     <section class="bottom-submit-section" id="submit-news">
       <div class="submit-box-wrapper">
         <div class="section-header">
           <h2 class="section-title">সংবাদ পাঠান</h2>
         </div>
         <p style="font-size:0.96rem; color:var(--text-muted); margin-bottom:16px;">আপনার ক্যাম্পাস, পলিটেকনিক বা কারিগরি শিক্ষা সংক্রান্ত যেকোনো তথ্য, সংবাদ ও ছবি নিচের ফর্মের মাধ্যমে আমাদের কাছে পাঠান।</p>
-        <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" enctype="multipart/form-data">
+        <form action="https://formspree.io/f/xjgpoeak" method="POST" enctype="multipart/form-data">
           <div class="submit-form-grid">
             <div class="form-group">
               <label>আপনার নাম ও প্রতিষ্ঠান</label>
@@ -1278,70 +1260,79 @@
         {
           title: "স্মার্ট গ্রিড ও নবায়নযোগ্য জ্বালানি ব্যবস্থাপনায় পলিটেকনিক শিক্ষার্থীদের নতুন গবেষণা প্রকল্প",
           cat: "Tech & Research",
+          date: "০৬ নভেম্বর ২০২৬",
           reporter: "গবেষণা ডেস্ক",
           image: "",
           details: "দেশের ক্রমবর্ধমান বিদ্যুৎ চাহিদা ও লোডশেডিং মোকাবিলায় কম খরচে স্মার্ট সোলার মাইক্রোগ্রিড কন্ট্রোলার তৈরি করেছেন পলিটেকনিক ইনস্টিটিউটের একদল শিক্ষার্থী। সৌরবিদ্যুৎ ও ব্যাটারি স্টোরেজ সিস্টেমের স্বয়ংক্রিয় লোড ব্যালেন্সিং নিয়ে কাজ করছেন ইলেকট্রিক্যাল ও ইলেকট্রনিক্স টেকনোলজির শিক্ষার্থীরা।",
           link: "#"
         },
         {
-          title": "দেশের শীর্ষস্থানীয় আইএসপি ও টেলিকম প্রতিষ্ঠানে নেটওয়ার্ক ইঞ্জিনিয়ার পদে ইন্টার্নশিপের সুযোগ",
+          title: "দেশের শীর্ষস্থানীয় আইএসপি ও টেলিকম প্রতিষ্ঠানে নেটওয়ার্ক ইঞ্জিনিয়ার পদে ইন্টার্নশিপের সুযোগ",
           cat: "Job Placement",
+          date: "০৭ নভেম্বর ২০২৬",
           reporter: "জব ডেস্ক",
           image: "",
           details: "কম্পিউটার ও টেলিকমিউনিকেশন টেকনোলজির অষ্টম পর্বের শিক্ষার্থীদের জন্য ৩ মাসব্যাপী পেইড ইন্ডাস্ট্রিয়াল ইন্টার্নশিপ ঘোষণা করা হয়েছে। রাউটিং, সুইচিং, ওএলটি কনফিগারেশন, ফাইবার অপটিক স্প্লাইসিং এবং সার্ভার রক্ষণাবেক্ষণে আগ্রহী ডিপ্লোমা শিক্ষার্থীদের কাছ থেকে আবেদন আহ্বান করা হয়েছে।",
           link: "#"
         },
         {
-          title": "পলিটেকনিক শিক্ষার্থীদের উদ্ভাবিত স্মার্ট ওয়াটার মনিটরিং সিস্টেম DrainSense জাতীয় পুরস্কারে ভূষিত",
+          title: "পলিটেকনিক শিক্ষার্থীদের উদ্ভাবিত স্মার্ট ওয়াটার মনিটরিং সিস্টেম DrainSense জাতীয় পুরস্কারে ভূষিত",
           cat: "Tech & Research",
+          date: "০৮ নভেম্বর ২০২৬",
           reporter: "উদ্ভাবন ডেস্ক",
           image: "",
           details: "শহরের ড্রেনেজ ও শিল্পবর্জ্য পানির গুণগত মান তাৎক্ষণিকভাবে পর্যবেক্ষণের জন্য কারিগরি শিক্ষার্থীদের একটি দল আধুনিক আইওটি (IoT) ভিত্তিক সিস্টেম তৈরি করেছে। ESP32 ও STM32 মাইক্রোকন্ট্রোলার এবং মাল্টি-প্যারামিটার সেন্সর ব্যবহার করে তৈরি এই পরিবেশবান্ধব বর্জ্যপানি পর্যবেক্ষণ প্রযুক্তিটি প্রশংসা কুড়িয়েছে।",
           link: "#"
         },
         {
-          title": "ডুয়েট (DUET) ভর্তি প্রস্তুতি ও ইন্ডাস্ট্রিয়াল অ্যাটাচমেন্ট নির্বাচন নির্দেশিকা ২০২৬",
+          title: "ডুয়েট (DUET) ভর্তি প্রস্তুতি ও ইন্ডাস্ট্রিয়াল অ্যাটাচমেন্ট নির্বাচন নির্দেশিকা ২০২৬",
           cat: "Training",
+          date: "০৯ নভেম্বর ২০২৬",
           reporter: "ক্যারিয়ার ডেস্ক",
           image: "",
           details: "ডিপ্লোমা-ইন-ইঞ্জিনিয়ারিংয়ের অষ্টম পর্বের শিক্ষার্থীদের জন্য ইন্ডাস্ট্রিয়াল অ্যাটাচমেন্ট একটি অত্যন্ত গুরুত্বপূর্ণ অধ্যায়। পাশাপাশি যারা উচ্চশিক্ষার জন্য ঢাকা প্রকৌশল ও প্রযুক্তি বিশ্ববিদ্যালয় (DUET) ভর্তি পরীক্ষায় অংশ নিতে চান, তাদের জন্য অ্যাটাচমেন্ট চলাকালীন সময় থেকেই পদার্থবিজ্ঞান, রসায়ন ও গণিতের নিয়মিত চর্চা করা জরুরি।",
           link: "#"
         },
         {
-          title": "মাঠ পর্যায়ের টেস্ট: এক্সটার্নাল অ্যান্টেনাযুক্ত 4G LTE রাউটার বনাম সাধারণ ইনডোর রাউটার",
+          title: "মাঠ পর্যায়ের টেস্ট: এক্সটার্নাল অ্যান্টেনাযুক্ত 4G LTE রাউটার বনাম সাধারণ ইনডোর রাউটার",
           cat: "Tech & Research",
+          date: "১০ নভেম্বর ২০২৬",
           reporter: "টেক ডেস্ক",
           image: "",
           details: "শহরের ঘনবসতিপূর্ণ কংক্রিট ভবন কিংবা দূরবর্তী ইন্ডাস্ট্রিয়াল ল্যাবে মোবাইল সিমের নেটওয়ার্ক দুর্বল থাকায় অনেকেই নিরবচ্ছিন্ন ইন্টারনেট সংযোগ পান না। এই সমস্যা সমাধানে রিমুভেবল SMA কো-অ্যাক্সিয়াল অ্যান্টেনাযুক্ত 4G LTE রাউটার এবং সাধারণ ইনডোর রাউটারের মধ্যে সরাসরি মাঠ পর্যায়ের তুলনামূলক পরীক্ষা চালানো হয়েছে।",
           link: "https://youtube.com"
         },
         {
-          title": "NSDA CBT&A লেভেল-৩ ও ৪ ট্রেইনার এবং অ্যাসেসর নিবন্ধন বিজ্ঞপ্তি",
+          title: "NSDA CBT&A লেভেল-৩ ও ৪ ট্রেইনার এবং অ্যাসেসর নিবন্ধন বিজ্ঞপ্তি",
           cat: "Training",
+          date: "১১ নভেম্বর ২০২৬",
           reporter: "প্রশিক্ষণ ডেস্ক",
           image: "",
           details: "জাতীয় দক্ষতা উন্নয়ন কর্তৃপক্ষ (NSDA) দেশের কারিগরি প্রশিক্ষণ কেন্দ্রগুলোর মানোন্নয়নের লক্ষ্যে আইটি সাপোর্ট সার্ভিস, ওয়েব ডিজাইন, ইলেকট্রিক্যাল ইনস্টলেশন এবং গ্রাফিক ডিজাইন অকুপেশনে নতুন করে ট্রেইনার ও অ্যাসেসর নিবন্ধনের আহ্বান জানিয়েছে।",
           link: "https://nsda.gov.bd"
         },
         {
-          title": "১০ম গ্রেড উপ-সহকারী প্রকৌশলী (SAE) নিয়োগ ও প্রাইভেট সেক্টরে জব সার্কুলার",
+          title: "১০ম গ্রেড উপ-সহকারী প্রকৌশলী (SAE) নিয়োগ ও প্রাইভেট সেক্টরে জব সার্কুলার",
           cat: "Job Placement",
+          date: "১২ নভেম্বর ২০২৬",
           reporter: "জব প্লেসমেন্ট ডেস্ক",
           image: "",
           details: "সদ্য ডিপ্লোমা-ইন-ইঞ্জিনিয়ারিং পাস করা শিক্ষার্থীদের কর্মসংস্থানের লক্ষ্যে চলতি সপ্তাহের সরকারি ও বেসরকারি নিয়োগ বিজ্ঞপ্তিগুলো একত্রিত করা হয়েছে। বাস্তব ল্যাব, নেটওয়ার্কিং ও হার্ডওয়্যার ট্রাবলশুটিংয়ে দক্ষতা থাকলে প্রার্থীরা অগ্রাধিকার পাবেন।",
           link: "#"
         },
         {
-          title": "ল্যাব আধুনিকায়ন ও বকেয়া বৃত্তির দাবিতে পলিটেকনিক শিক্ষার্থীদের ৬ দফা স্মারকলিপি পেশ",
+          title: "ল্যাব আধুনিকায়ন ও বকেয়া বৃত্তির দাবিতে পলিটেকনিক শিক্ষার্থীদের ৬ দফা স্মারকলিপি পেশ",
           cat: "Campus Politics",
+          date: "১২ নভেম্বর ২০২৬",
           reporter: "ক্যাম্পাস ডেস্ক",
           image: "",
           details: "বৃহস্পতিবার সকালে ক্যাম্পাসের প্রশাসনিক ভবনের সামনে বিভিন্ন টেকনোলজির শিক্ষার্থীরা সমবেত হয়ে শান্তিপূর্ণ অবস্থান কর্মসূচি পালন করেন। আধুনিক ওয়ার্কশপ সরঞ্জাম সরবরাহ, শিক্ষক সংকট নিরসন এবং সেমিস্টার বৃত্তির অর্থ দ্রুত ছাড়ের দাবিতে অধ্যক্ষ বরাবর ৬ দফা স্মারকলিপি দিয়েছেন সাধারণ শিক্ষার্থীরা।",
           link: "#"
         },
         {
-          title": "বিটিইবি ডিপ্লোমা-ইন-ইঞ্জিনিয়ারিং সেমিস্টার পরীক্ষার রুটিন ও ফরম ফিলাপের বিজ্ঞপ্তি প্রকাশ",
+          title: "বিটিইবি ডিপ্লোমা-ইন-ইঞ্জিনিয়ারিং সেমিস্টার পরীক্ষার রুটিন ও ফরম ফিলাপের বিজ্ঞপ্তি প্রকাশ",
           cat: "Notices",
+          date: "১৩ নভেম্বর ২০২৬",
           reporter: "নোটিশ ডেস্ক",
           image: "",
           details: "বাংলাদেশ কারিগরি শিক্ষা বোর্ডের (BTEB) পরীক্ষা নিয়ন্ত্রক দপ্তর থেকে প্রকাশিত এক জরুরি বিজ্ঞপ্তিতে জানানো হয়েছে, ২০২৬ সালের ডিপ্লোমা-ইন-ইঞ্জিনিয়ারিং শিক্ষাক্রমের নিয়মিত ও অনিয়মিত পর্বের পরীক্ষার সময়সূচি চূড়ান্ত করা হয়েছে। মূল রুটিন ও ফি কাঠামোর অফিশিয়াল পিডিএফ কপি নিচের লিংক থেকে সরাসরি ডাউনলোড করা যাবে।",
@@ -1355,6 +1346,7 @@
     let showExpandedGrid = false;
     let hasExclusiveVideos = false;
     let activeArticleTitle = '';
+    let activeArticleUid = null;
 
     const CATEGORY_LABELS_BN = {
       'ALL': 'সকল সংবাদ ও নোটিশ',
@@ -1366,7 +1358,7 @@
     };
 
     function normalizeCategory(rawCat) {
-      if (!rawCat) return '';
+      if (!rawCat) return 'Notices';
       const val = String(rawCat).trim().toLowerCase();
       if (val.includes('notice') || val.includes('নোটিশ')) return 'Notices';
       if (val.includes('train') || val.includes('duet') || val.includes('প্রশিক্ষণ')) return 'Training';
@@ -1374,6 +1366,34 @@
       if (val.includes('campus') || val.includes('politic') || val.includes('ক্যাম্পাস')) return 'Campus Politics';
       if (val.includes('tech') || val.includes('research') || val.includes('প্রযুক্তি')) return 'Tech & Research';
       return String(rawCat).trim();
+    }
+
+    function normalizeExternalUrl(rawUrl) {
+      if (!rawUrl) return '';
+      const clean = String(rawUrl).trim();
+      if (!clean || clean === '#') return '';
+      if (/^(https?:\/\/|mailto:|tel:|\/|#)/i.test(clean)) return clean;
+      return 'https://' + clean;
+    }
+
+    function buildDirectArticleUrl(uid) {
+      if (window.location.protocol === 'file:') {
+        return window.location.href;
+      }
+      const urlObj = new URL(window.location.origin + window.location.pathname);
+      if (uid) {
+        urlObj.searchParams.set('news', String(uid));
+      }
+      return urlObj.toString();
+    }
+
+    function updateBrowserArticleUrl(uid) {
+      if (window.location.protocol === 'file:') return;
+      const urlObj = new URL(window.location.origin + window.location.pathname);
+      if (uid) {
+        urlObj.searchParams.set('news', String(uid));
+      }
+      window.history.replaceState(null, '', urlObj.toString());
     }
 
     function setAutoEditorialDates() {
@@ -1399,7 +1419,7 @@
 
     function extractYouTubeId(input) {
       if (!input) return '';
-      const clean = input.trim();
+      const clean = String(input).trim();
       if (/^[a-zA-Z0-9_-]{11}$/.test(clean)) return clean;
       const regExp = /(?:youtube\.com\/(?:watch\?v=|embed\/|shorts\/|live\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
       const match = clean.match(regExp);
@@ -1407,9 +1427,10 @@
     }
 
     function getRelativeBanglaDate(dateStr) {
-      if (!dateStr || !dateStr.trim()) return 'আজ প্রকাশিত';
+      if (!dateStr || !String(dateStr).trim()) return 'সর্বশেষ প্রকাশিত';
+      const raw = String(dateStr).trim();
       const bnToEnDigits = { '০':'0','১':'1','২':'2','৩':'3','৪':'4','৫':'5','৬':'6','৭':'7','৮':'8','৯':'9' };
-      const normalized = dateStr.replace(/[০-৯]/g, d => bnToEnDigits[d]);
+      const normalized = raw.replace(/[০-৯]/g, d => bnToEnDigits[d]);
       const monthsBn = {
         'জানুয়ারি': 0, 'জানুয়ারি': 0, 'ফেব্রুয়ারি': 1, 'ফেব্রুয়ারি': 1, 'মার্চ': 2,
         'এপ্রিল': 3, 'মে': 4, 'জুন': 5, 'জুলাই': 6, 'আগস্ট': 7,
@@ -1417,7 +1438,7 @@
       };
 
       let parsedDate = null;
-      const parts = normalized.trim().split(/[\s,-]+/);
+      const parts = normalized.split(/[\s,-]+/);
       if (parts.length === 3 && monthsBn[parts[1]] !== undefined) {
         parsedDate = new Date(parseInt(parts[2], 10), monthsBn[parts[1]], parseInt(parts[0], 10));
       } else {
@@ -1425,7 +1446,7 @@
         if (!isNaN(tryDate.getTime())) parsedDate = tryDate;
       }
 
-      if (!parsedDate || isNaN(parsedDate.getTime())) return dateStr;
+      if (!parsedDate || isNaN(parsedDate.getTime())) return raw;
 
       const today = new Date();
       today.setHours(0, 0, 0, 0);
@@ -1433,12 +1454,12 @@
       const diffDays = Math.floor((today - parsedDate) / (1000 * 60 * 60 * 24));
 
       const toBn = num => num.toString().replace(/\d/g, d => '০১২৩৪৫৬৭৮৯'[d]);
-      if (diffDays <= 0) return `আজ (${dateStr})`;
-      if (diffDays === 1) return `গতকাল (${dateStr})`;
-      if (diffDays < 30) return `${toBn(diffDays)} দিন আগে (${dateStr})`;
+      if (diffDays <= 0) return `আজ (${raw})`;
+      if (diffDays === 1) return `গতকাল (${raw})`;
+      if (diffDays < 30) return `${toBn(diffDays)} দিন আগে (${raw})`;
       const diffMonths = Math.floor(diffDays / 30);
-      if (diffMonths < 12) return `${toBn(diffMonths)} মাস আগে (${dateStr})`;
-      return dateStr;
+      if (diffMonths < 12) return `${toBn(diffMonths)} মাস আগে (${raw})`;
+      return raw;
     }
 
     function renderSponsorSlot(containerId, adData, isSidebar) {
@@ -1450,14 +1471,12 @@
       }
 
       container.style.display = 'flex';
-      const rawLink = (adData.link || '').trim();
-      const hasValidLink = rawLink && rawLink !== '#';
-      const isInternalAnchor = rawLink.startsWith('#');
-      const finalHref = hasValidLink ? rawLink : '#submit-news';
-      const targetAttr = (!isInternalAnchor && hasValidLink) ? 'target="_blank" rel="noopener noreferrer"' : '';
+      const finalHref = normalizeExternalUrl(adData.link) || '#submit-news';
+      const isInternalAnchor = finalHref.startsWith('#');
+      const targetAttr = !isInternalAnchor ? 'target="_blank" rel="noopener noreferrer"' : '';
       const boxClass = isSidebar ? 'promo-link-box sidebar-promo-box' : 'promo-link-box';
 
-      if (adData.image && adData.image.trim() !== '') {
+      if (adData.image && String(adData.image).trim() !== '') {
         container.innerHTML = `
           <a href="${finalHref}" ${targetAttr} class="${boxClass}">
             <img src="${adData.image}" alt="Featured Banner" />
@@ -1473,7 +1492,7 @@
     }
 
     function buildCardHtml(art) {
-      const hasImg = art.image && art.image.trim() !== '';
+      const hasImg = art.image && String(art.image).trim() !== '';
       const mediaHtml = hasImg
         ? `<img class="card-thumb" src="${art.image}" alt="${art.title}" loading="lazy" />`
         : `<div class="card-placeholder-banner">TVET TRIBUNE</div>`;
@@ -1484,7 +1503,7 @@
           ${mediaHtml}
           <div class="card-content">
             <div>
-              <h3 class="card-title">${art.title}</h3>
+              <h3 class="card-title">${art.title || 'শিরোনামহীন সংবাদ'}</h3>
               <p class="card-summary">${snippet}</p>
             </div>
             <div class="card-footer">
@@ -1580,6 +1599,7 @@
     function filterCategory(cat, btnElement) {
       currentFilter = cat;
       showExpandedGrid = false;
+      activeArticleUid = null;
 
       document.getElementById('articleReaderWrapper').classList.remove('active');
       document.getElementById('portalHomeView').style.display = 'block';
@@ -1589,7 +1609,7 @@
       const q = document.getElementById('searchInput').value.trim();
 
       if (cat === 'ALL' && !q) {
-        heroGrid.style.display = 'grid';
+        heroGrid.style.display = '';
         if (hasExclusiveVideos) exclusiveSection.style.display = 'block';
       } else {
         heroGrid.style.display = 'none';
@@ -1600,9 +1620,7 @@
       if (btnElement) btnElement.classList.add('active');
 
       document.getElementById('navLinks').classList.remove('show');
-      if (window.location.protocol !== 'file:') {
-        window.history.replaceState(null, '', window.location.pathname);
-      }
+      updateBrowserArticleUrl(null);
 
       const baseLabel = CATEGORY_LABELS_BN[cat] || cat;
       document.getElementById('gridHeading').textContent = q
@@ -1619,6 +1637,7 @@
     function handleSearch() {
       const q = document.getElementById('searchInput').value.trim();
       showExpandedGrid = q.length > 0;
+      activeArticleUid = null;
       document.getElementById('articleReaderWrapper').classList.remove('active');
       document.getElementById('portalHomeView').style.display = 'block';
 
@@ -1631,7 +1650,7 @@
           ? `"${q}" অনুসন্ধানের ফলাফল`
           : `${baseLabel} বিভাগে "${q}" অনুসন্ধানের ফলাফল`;
       } else if (currentFilter === 'ALL') {
-        document.getElementById('heroEditorialGrid').style.display = 'grid';
+        document.getElementById('heroEditorialGrid').style.display = '';
         if (hasExclusiveVideos) document.getElementById('exclusiveVideosSection').style.display = 'block';
         document.getElementById('gridHeading').textContent = baseLabel;
       } else {
@@ -1655,6 +1674,7 @@
       const art = allArticles.find(a => a._uid === uid);
       if (!art) return;
       activeArticleTitle = art.title || '';
+      activeArticleUid = uid;
 
       document.getElementById('portalHomeView').style.display = 'none';
       const readerWrapper = document.getElementById('articleReaderWrapper');
@@ -1667,7 +1687,7 @@
       document.getElementById('readerBody').textContent = art.details || art.summary || '';
 
       const readerImg = document.getElementById('readerImage');
-      if (art.image && art.image.trim() !== '') {
+      if (art.image && String(art.image).trim() !== '') {
         readerImg.src = art.image;
         readerImg.style.display = 'block';
       } else {
@@ -1675,8 +1695,9 @@
       }
 
       const extLink = document.getElementById('readerExternalLink');
-      if (art.link && art.link.trim() !== '' && art.link !== '#') {
-        extLink.href = art.link;
+      const validExtUrl = normalizeExternalUrl(art.link);
+      if (validExtUrl && validExtUrl !== '#') {
+        extLink.href = validExtUrl;
         extLink.style.display = 'inline-block';
       } else {
         extLink.style.display = 'none';
@@ -1688,30 +1709,28 @@
       document.title = `${art.title} | TVET Tribune`;
       document.getElementById('og-title').setAttribute('content', art.title);
       document.getElementById('og-description').setAttribute('content', (art.details || art.summary || '').slice(0, 160));
-      if (art.image) document.getElementById('og-image').setAttribute('content', window.location.origin + art.image);
-      if (window.location.protocol !== 'file:') {
-        window.history.replaceState(null, '', `#news-${uid}`);
+      if (art.image && window.location.protocol.startsWith('http')) {
+        document.getElementById('og-image').setAttribute('content', window.location.origin + art.image);
       }
 
+      updateBrowserArticleUrl(uid);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     function closeReaderView() {
+      activeArticleUid = null;
       document.getElementById('articleReaderWrapper').classList.remove('active');
       document.getElementById('portalHomeView').style.display = 'block';
       if (currentFilter === 'ALL' && document.getElementById('searchInput').value.trim() === '') {
-        document.getElementById('heroEditorialGrid').style.display = 'grid';
+        document.getElementById('heroEditorialGrid').style.display = '';
         if (hasExclusiveVideos) document.getElementById('exclusiveVideosSection').style.display = 'block';
       }
       document.title = 'TVET Tribune | কারিগরি ও প্রকৌশল শিক্ষার নির্ভরযোগ্য সংবাদমাধ্যম';
-      if (window.location.protocol !== 'file:') {
-        window.history.replaceState(null, '', window.location.pathname);
-      }
+      updateBrowserArticleUrl(null);
     }
 
-    // 4 Social Share Functions: All include the Specific News Headline + Direct Article Link
     function getSharePayload() {
-      const url = window.location.href;
+      const url = buildDirectArticleUrl(activeArticleUid);
       const title = activeArticleTitle || document.title;
       return { url, title };
     }
@@ -1724,7 +1743,7 @@
     }
 
     function shareToMessenger() {
-      const { url, title } = getSharePayload();
+      const { url } = getSharePayload();
       const encodedUrl = encodeURIComponent(url);
       const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
       if (isMobile) {
@@ -1758,6 +1777,20 @@
       }
     });
 
+    function checkDeepLinkedArticle() {
+      const params = new URLSearchParams(window.location.search);
+      const queryNewsId = parseInt(params.get('news'), 10);
+      if (!isNaN(queryNewsId)) {
+        openArticleById(queryNewsId);
+        return;
+      }
+      const hash = window.location.hash;
+      if (hash.startsWith('#news-')) {
+        const hashNewsId = parseInt(hash.replace('#news-', ''), 10);
+        if (!isNaN(hashNewsId)) openArticleById(hashNewsId);
+      }
+    }
+
     function applyPortalData(data) {
       const safeData = data || FALLBACK_PORTAL_DATA;
 
@@ -1770,9 +1803,9 @@
       document.getElementById('leadSummary').textContent = safeData.leadSummary || FALLBACK_PORTAL_DATA.leadSummary;
 
       const social = safeData.socialLinks || FALLBACK_PORTAL_DATA.socialLinks;
-      if (social.youtube) document.getElementById('socialYoutube').href = social.youtube;
-      if (social.facebook) document.getElementById('socialFacebook').href = social.facebook;
-      if (social.linkedin) document.getElementById('socialLinkedin').href = social.linkedin;
+      if (social.youtube) document.getElementById('socialYoutube').href = normalizeExternalUrl(social.youtube);
+      if (social.facebook) document.getElementById('socialFacebook').href = normalizeExternalUrl(social.facebook);
+      if (social.linkedin) document.getElementById('socialLinkedin').href = normalizeExternalUrl(social.linkedin);
 
       const adsData = (safeData.ads && (safeData.ads.topBanner || safeData.ads.sidebarBox || safeData.ads.midBanner))
         ? safeData.ads
@@ -1782,8 +1815,13 @@
       renderSponsorSlot('midSponsorSlot', adsData.midBanner || FALLBACK_PORTAL_DATA.ads.midBanner, false);
       renderSponsorSlot('sidebarSponsorSlot', adsData.sidebarBox || FALLBACK_PORTAL_DATA.ads.sidebarBox, true);
 
-      const rawArticles = (Array.isArray(safeData.articles) && safeData.articles.length > 0)
-        ? safeData.articles
+      // Filter out any blank/empty items from CMS so they never break the cards
+      const validCustomArticles = Array.isArray(safeData.articles)
+        ? safeData.articles.filter(item => item && item.title && String(item.title).trim() !== '')
+        : [];
+
+      const rawArticles = validCustomArticles.length > 0
+        ? validCustomArticles
         : FALLBACK_PORTAL_DATA.articles;
 
       allArticles = rawArticles.map((item, index) => ({
@@ -1798,30 +1836,29 @@
       renderArticles(getFilteredArticles());
       renderLatestSidebar(allArticles);
 
-      const videos = (Array.isArray(safeData.exclusiveVideos) && safeData.exclusiveVideos.length > 0)
-        ? safeData.exclusiveVideos
-        : FALLBACK_PORTAL_DATA.exclusiveVideos;
-      renderExclusiveVideos(videos);
+      const validVideos = Array.isArray(safeData.exclusiveVideos)
+        ? safeData.exclusiveVideos.filter(v => v && v.title && v.videoUrl)
+        : [];
 
-      const hash = window.location.hash;
-      if (hash.startsWith('#news-')) {
-        const targetId = parseInt(hash.replace('#news-', ''), 10);
-        if (!isNaN(targetId)) openArticleById(targetId);
-      }
+      renderExclusiveVideos(validVideos.length > 0 ? validVideos : FALLBACK_PORTAL_DATA.exclusiveVideos);
+
+      checkDeepLinkedArticle();
     }
 
     async function initPortal() {
+      // 1. Immediately render fallback data so offline/local opens never stay blank
       applyPortalData(FALLBACK_PORTAL_DATA);
 
+      // 2. Fetch live data.json when hosted online
       if (window.location.protocol.startsWith('http')) {
         try {
-          const res = await fetch(`data.json?v=${Date.now()}`);
+          const res = await fetch(`./data.json?nocache=${Date.now()}`, { cache: 'no-store' });
           if (res.ok) {
             const liveData = await res.json();
             applyPortalData(liveData);
           }
         } catch (err) {
-          console.warn('Using fallback portal data:', err);
+          console.warn('Using built-in fallback data:', err);
         }
       }
     }
