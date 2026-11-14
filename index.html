@@ -15,10 +15,8 @@
   <meta id="og-url" property="og:url" content="" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Single Unified Font: Hind Siliguri -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Formal Newspaper Font: SolaimanLipi (Web Font + System Fallback) -->
+  <link rel="stylesheet" href="https://fonts.maateen.me/solaiman-lipi/font.css" />
 
   <style>
     :root {
@@ -39,7 +37,7 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: 'Hind Siliguri', sans-serif;
+      font-family: 'SolaimanLipi', Arial, sans-serif;
     }
 
     body {
@@ -49,7 +47,7 @@
         linear-gradient(to bottom, rgba(255, 255, 255, 0.65), rgba(248, 247, 245, 0.95));
       background-size: 18px 18px, 100% 100%;
       color: var(--ink-dark);
-      line-height: 1.65;
+      line-height: 1.68;
       overflow-x: hidden;
     }
 
@@ -66,7 +64,7 @@
 
     /* Main Header */
     .site-header {
-      background-color: rgba(255, 255, 255, 0.97);
+      background-color: rgba(255, 255, 255, 0.98);
       backdrop-filter: blur(6px);
       padding: 18px 0;
       border-bottom: 1px solid var(--border-light);
@@ -90,7 +88,7 @@
       background: linear-gradient(135deg, var(--charcoal-light) 0%, var(--red-primary) 100%);
       color: #ffffff;
       font-weight: 700;
-      font-size: 1.4rem;
+      font-size: 1.45rem;
       padding: 8px 13px;
       border-radius: 8px;
       letter-spacing: 0.5px;
@@ -98,7 +96,7 @@
     }
 
     .brand-title {
-      font-size: 1.85rem;
+      font-size: 1.95rem;
       font-weight: 700;
       color: var(--charcoal-light);
       line-height: 1.1;
@@ -109,7 +107,7 @@
     }
 
     .brand-tagline {
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       color: var(--text-muted);
       margin-top: 2px;
     }
@@ -175,7 +173,7 @@
       background: transparent;
       outline: none;
       width: 100%;
-      font-size: 0.95rem;
+      font-size: 0.98rem;
       color: var(--ink-dark);
       padding: 4px;
     }
@@ -188,7 +186,7 @@
       border-radius: 5px;
       cursor: pointer;
       font-weight: 600;
-      font-size: 0.86rem;
+      font-size: 0.9rem;
       transition: background 0.2s;
     }
 
@@ -229,7 +227,7 @@
       background: transparent;
       border: none;
       color: #f1f5f9;
-      font-size: 1rem;
+      font-size: 1.02rem;
       font-weight: 600;
       padding: 11px 15px;
       cursor: pointer;
@@ -251,7 +249,7 @@
       border: 1px solid rgba(254, 202, 202, 0.35);
       padding: 5px 14px;
       border-radius: 5px;
-      font-size: 0.88rem;
+      font-size: 0.92rem;
       font-weight: 600;
       white-space: nowrap;
       transition: all 0.2s;
@@ -275,12 +273,12 @@
       border: 1px solid #64748b;
       padding: 6px 14px;
       border-radius: 5px;
-      font-size: 0.95rem;
+      font-size: 0.98rem;
       font-weight: 600;
       cursor: pointer;
     }
 
-    /* Sponsor / Promo Banner System (AdBlocker-Safe Class Names) */
+    /* Sponsor / Promo Banner System */
     .promo-wrapper {
       margin: 18px auto;
       display: flex;
@@ -310,12 +308,12 @@
     }
 
     .promo-text-placeholder {
-      background: rgba(255, 255, 255, 0.92);
+      background: rgba(255, 255, 255, 0.95);
       border: 1px dashed #94a3b8;
       color: var(--text-muted);
       text-align: center;
       padding: 15px 14px;
-      font-size: 0.92rem;
+      font-size: 0.95rem;
       font-weight: 500;
       border-radius: 8px;
     }
@@ -330,7 +328,7 @@
       align-items: center;
       overflow: hidden;
       margin-bottom: 24px;
-      box-shadow: 0 2px 6px rgba(51, 65, 85, 0.04);
+      box-shadow: 0 3px 10px rgba(30, 41, 59, 0.06);
     }
 
     .ticker-label {
@@ -339,7 +337,7 @@
       font-weight: 700;
       padding: 9px 16px;
       white-space: nowrap;
-      font-size: 0.95rem;
+      font-size: 0.98rem;
     }
 
     .ticker-track {
@@ -354,6 +352,7 @@
       animation: marquee 28s linear infinite;
       font-weight: 500;
       color: var(--ink-dark);
+      font-size: 1rem;
     }
 
     .ticker-content:hover {
@@ -381,7 +380,7 @@
       border-radius: 10px;
       padding: 28px;
       margin-bottom: 28px;
-      box-shadow: 0 4px 16px rgba(51, 65, 85, 0.06);
+      box-shadow: 0 6px 20px rgba(30, 41, 59, 0.08);
     }
 
     .btn-back-list {
@@ -390,7 +389,7 @@
       border: 1px solid var(--red-border);
       padding: 7px 15px;
       border-radius: 6px;
-      font-size: 0.94rem;
+      font-size: 0.96rem;
       font-weight: 600;
       cursor: pointer;
       margin-bottom: 16px;
@@ -403,7 +402,7 @@
     }
 
     .reader-title {
-      font-size: 1.85rem;
+      font-size: 1.95rem;
       font-weight: 700;
       color: var(--ink-dark);
       line-height: 1.38;
@@ -420,9 +419,9 @@
     }
 
     .reader-body-text {
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       color: var(--ink-dark);
-      line-height: 1.85;
+      line-height: 1.88;
       white-space: pre-line;
       margin-bottom: 24px;
     }
@@ -437,7 +436,7 @@
     }
 
     .share-label {
-      font-size: 0.96rem;
+      font-size: 1rem;
       font-weight: 600;
       color: var(--charcoal-light);
     }
@@ -454,7 +453,7 @@
       gap: 6px;
       padding: 8px 15px;
       border-radius: 6px;
-      font-size: 0.92rem;
+      font-size: 0.95rem;
       font-weight: 600;
       border: 1px solid transparent;
       cursor: pointer;
@@ -515,7 +514,7 @@
       border: 1px solid var(--border-light);
       border-radius: 10px;
       overflow: hidden;
-      box-shadow: 0 4px 14px rgba(51, 65, 85, 0.05);
+      box-shadow: 0 6px 18px rgba(30, 41, 59, 0.08);
       margin-bottom: 20px;
     }
 
@@ -540,15 +539,15 @@
     }
 
     .lead-title {
-      font-size: 1.58rem;
+      font-size: 1.65rem;
       font-weight: 700;
       color: var(--ink-dark);
-      line-height: 1.38;
+      line-height: 1.4;
       margin-bottom: 8px;
     }
 
     .meta-line {
-      font-size: 0.88rem;
+      font-size: 0.92rem;
       color: var(--text-muted);
       display: flex;
       align-items: center;
@@ -559,7 +558,7 @@
 
     .lead-summary {
       color: #475569;
-      font-size: 1.03rem;
+      font-size: 1.06rem;
     }
 
     /* Section Headings */
@@ -573,7 +572,7 @@
     }
 
     .section-title {
-      font-size: 1.3rem;
+      font-size: 1.38rem;
       font-weight: 700;
       color: var(--charcoal-light);
       position: relative;
@@ -597,7 +596,7 @@
       border: 1px solid var(--border-light);
       border-radius: 10px;
       padding: 20px;
-      box-shadow: 0 4px 14px rgba(51, 65, 85, 0.04);
+      box-shadow: 0 6px 18px rgba(30, 41, 59, 0.08);
     }
 
     .latest-list {
@@ -616,10 +615,10 @@
     }
 
     .latest-item-title {
-      font-size: 1rem;
+      font-size: 1.04rem;
       font-weight: 600;
       color: var(--ink-dark);
-      line-height: 1.42;
+      line-height: 1.45;
       transition: color 0.2s;
     }
 
@@ -628,12 +627,12 @@
     }
 
     .latest-item-time {
-      font-size: 0.82rem;
+      font-size: 0.85rem;
       color: var(--text-muted);
       margin-top: 3px;
     }
 
-    /* All News Grid & "আরও পড়ুন" Cards Grid */
+    /* Equal-Height News Grid with Prominent Drop-Shadow */
     .all-news-section {
       margin-bottom: 34px;
     }
@@ -641,63 +640,71 @@
     .news-grid-3col {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      gap: 22px;
+      align-items: stretch;
     }
 
     .news-card {
       background: var(--card-bg);
-      border: 1px solid var(--border-light);
+      border: 1px solid #dce3ec;
       border-radius: 10px;
       overflow: hidden;
+      height: 100%;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      box-shadow: 0 3px 10px rgba(51, 65, 85, 0.04);
-      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+      box-shadow: 0 6px 18px rgba(30, 41, 59, 0.10), 0 2px 6px rgba(30, 41, 59, 0.06);
+      transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
       cursor: pointer;
     }
 
     .news-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 22px rgba(220, 38, 38, 0.09);
+      transform: translateY(-4px);
+      box-shadow: 0 14px 28px rgba(220, 38, 38, 0.14), 0 6px 12px rgba(30, 41, 59, 0.08);
       border-color: var(--red-primary);
     }
 
     .card-thumb {
       width: 100%;
-      height: 170px;
+      height: 175px;
       object-fit: cover;
       background: #e2e8f0;
       display: block;
+      flex-shrink: 0;
     }
 
     .card-placeholder-banner {
       width: 100%;
-      height: 105px;
+      height: 115px;
       background: linear-gradient(135deg, var(--charcoal-light) 0%, var(--red-primary) 100%);
       color: #f8fafc;
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: 700;
-      font-size: 0.95rem;
+      font-size: 1rem;
       letter-spacing: 0.6px;
+      flex-shrink: 0;
     }
 
     .card-content {
-      padding: 17px;
-      flex-grow: 1;
+      padding: 18px;
+      flex: 1;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
 
     .card-title {
-      font-size: 1.15rem;
+      font-size: 1.2rem;
       font-weight: 700;
       color: var(--ink-dark);
-      line-height: 1.42;
-      margin-bottom: 8px;
+      line-height: 1.44;
+      margin-bottom: 9px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      min-height: 3.45rem;
     }
 
     .news-card:hover .card-title {
@@ -705,33 +712,37 @@
     }
 
     .card-summary {
-      font-size: 0.93rem;
+      font-size: 0.97rem;
       color: var(--text-muted);
-      margin-bottom: 12px;
+      line-height: 1.58;
+      margin-bottom: 14px;
       display: -webkit-box;
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
       overflow: hidden;
+      min-height: 4.55rem;
     }
 
     .card-footer {
-      border-top: 1px solid #f1f5f9;
-      padding-top: 10px;
+      border-top: 1px solid #eef2f6;
+      padding-top: 11px;
+      margin-top: auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-size: 0.82rem;
+      font-size: 0.86rem;
       color: var(--text-muted);
     }
 
     .read-more-link {
       color: var(--red-primary);
       font-weight: 600;
+      white-space: nowrap;
     }
 
     .load-more-wrap {
       text-align: center;
-      margin-top: 22px;
+      margin-top: 24px;
     }
 
     /* Simple Clean Exclusive Videos Section (3 Videos) */
@@ -742,31 +753,38 @@
     .exclusive-grid-3 {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      gap: 22px;
+      align-items: stretch;
     }
 
     .exclusive-card {
       background: var(--card-bg);
-      border: 1px solid var(--border-light);
+      border: 1px solid #dce3ec;
       border-radius: 10px;
       overflow: hidden;
-      box-shadow: 0 3px 10px rgba(51, 65, 85, 0.04);
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 6px 18px rgba(30, 41, 59, 0.10), 0 2px 6px rgba(30, 41, 59, 0.06);
     }
 
     .exclusive-info {
-      padding: 15px;
+      padding: 16px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .exclusive-title {
-      font-size: 1.05rem;
+      font-size: 1.08rem;
       font-weight: 600;
       color: var(--ink-dark);
-      line-height: 1.4;
-      margin-bottom: 5px;
+      line-height: 1.44;
+      margin-bottom: 8px;
     }
 
     .exclusive-meta {
-      font-size: 0.82rem;
+      font-size: 0.85rem;
       color: var(--text-muted);
     }
 
@@ -783,7 +801,7 @@
       padding: 26px;
       max-width: 780px;
       margin: 0 auto;
-      box-shadow: 0 4px 14px rgba(51, 65, 85, 0.05);
+      box-shadow: 0 6px 20px rgba(30, 41, 59, 0.08);
     }
 
     .submit-form-grid {
@@ -802,7 +820,7 @@
 
     .form-group label {
       display: block;
-      font-size: 0.92rem;
+      font-size: 0.96rem;
       font-weight: 600;
       margin-bottom: 4px;
       color: var(--ink-dark);
@@ -814,7 +832,7 @@
       padding: 9px 12px;
       border: 1px solid var(--border-light);
       border-radius: 6px;
-      font-size: 0.95rem;
+      font-size: 0.98rem;
       background: var(--offwhite-bg);
       color: var(--ink-dark);
     }
@@ -833,7 +851,7 @@
     }
 
     .field-hint {
-      font-size: 0.8rem;
+      font-size: 0.84rem;
       color: var(--text-muted);
       margin-top: 3px;
     }
@@ -844,7 +862,7 @@
       border: none;
       padding: 10px 26px;
       border-radius: 6px;
-      font-size: 1rem;
+      font-size: 1.04rem;
       font-weight: 600;
       cursor: pointer;
       transition: background 0.2s;
@@ -873,7 +891,7 @@
     }
 
     .footer-brand {
-      font-size: 1.55rem;
+      font-size: 1.65rem;
       font-weight: 700;
       color: #ffffff;
     }
@@ -885,7 +903,7 @@
     .footer-bottom {
       text-align: center;
       padding-top: 16px;
-      font-size: 0.88rem;
+      font-size: 0.92rem;
       color: #cbd5e1;
     }
 
@@ -906,7 +924,7 @@
         justify-content: flex-start;
       }
       .brand-title {
-        font-size: 1.55rem;
+        font-size: 1.65rem;
       }
       .header-right {
         width: 100%;
@@ -959,9 +977,13 @@
       .submit-form-grid {
         grid-template-columns: 1fr;
       }
+      .card-title,
+      .card-summary {
+        min-height: auto;
+      }
       .lead-title,
       .reader-title {
-        font-size: 1.42rem;
+        font-size: 1.48rem;
       }
       .article-reader-card {
         padding: 18px;
@@ -1045,7 +1067,7 @@
   <!-- Main Content Container -->
   <main class="container">
 
-    <!-- Full-Page Article Reader View (1. Main Article First -> 2. Share & Copy Link -> 3. "আরও পড়ুন" Latest News) -->
+    <!-- Full-Page Article Reader View -->
     <section class="article-reader-wrapper" id="articleReaderWrapper">
       <!-- 1. Main Article Content -->
       <article class="article-reader-card">
@@ -1059,7 +1081,7 @@
           <a id="readerExternalLink" href="#" target="_blank" rel="noopener noreferrer" class="btn-share-social btn-copy" style="display:none;">অফিশিয়াল লিংক / PDF দেখুন ↗</a>
         </div>
 
-        <!-- 2. Share & Copy Link Buttons -->
+        <!-- 2. Share & Copy Link Buttons (Includes Headline + Direct Link) -->
         <div class="share-section">
           <div class="share-label">সংবাদটি শেয়ার করুন:</div>
           <div class="share-buttons-row">
@@ -1135,7 +1157,7 @@
         </aside>
       </div>
 
-      <!-- All News Section (Desktop: 3×2 = 6 Cards | Mobile: 3 Cards) -->
+      <!-- All News Section (Equal-Height Cards with Drop Shadow) -->
       <section class="all-news-section" id="allNewsSection">
         <div class="section-header">
           <h2 class="section-title" id="gridHeading">সকল সংবাদ ও নোটিশ</h2>
@@ -1161,7 +1183,7 @@
         <div class="section-header">
           <h2 class="section-title">সংবাদ পাঠান</h2>
         </div>
-        <p style="font-size:0.94rem; color:var(--text-muted); margin-bottom:16px;">আপনার ক্যাম্পাস, পলিটেকনিক বা কারিগরি শিক্ষা সংক্রান্ত যেকোনো তথ্য, সংবাদ ও ছবি নিচের ফর্মের মাধ্যমে আমাদের কাছে পাঠান।</p>
+        <p style="font-size:0.96rem; color:var(--text-muted); margin-bottom:16px;">আপনার ক্যাম্পাস, পলিটেকনিক বা কারিগরি শিক্ষা সংক্রান্ত যেকোনো তথ্য, সংবাদ ও ছবি নিচের ফর্মের মাধ্যমে আমাদের কাছে পাঠান।</p>
         <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" enctype="multipart/form-data">
           <div class="submit-form-grid">
             <div class="form-group">
@@ -1203,11 +1225,11 @@
       <div class="footer-inner">
         <div>
           <div class="footer-brand">TVET <span>TRIBUNE</span></div>
-          <p style="margin-top:6px; font-size:0.92rem; color:#cbd5e1;">বাংলাদেশের কারিগরি, পলিটেকনিক ও প্রকৌশল শিক্ষার তথ্যভিত্তিক ডিজিটাল সংবাদমাধ্যম।</p>
+          <p style="margin-top:6px; font-size:0.96rem; color:#cbd5e1;">বাংলাদেশের কারিগরি, পলিটেকনিক ও প্রকৌশল শিক্ষার তথ্যভিত্তিক ডিজিটাল সংবাদমাধ্যম।</p>
         </div>
         <div>
-          <p style="font-weight:600; color:#ffffff; font-size:1rem;">কার্যালয় ও ঠিকানা</p>
-          <p style="font-size:0.94rem; margin-top:4px; color:#f1f5f9;">তেজগাঁও শিল্প এলাকা, ঢাকা ১২০৮</p>
+          <p style="font-weight:600; color:#ffffff; font-size:1.05rem;">কার্যালয় ও ঠিকানা</p>
+          <p style="font-size:0.98rem; margin-top:4px; color:#f1f5f9;">তেজগাঁও শিল্প এলাকা, ঢাকা ১২০৮</p>
         </div>
       </div>
       <div class="footer-bottom">
@@ -1262,7 +1284,7 @@
           link: "#"
         },
         {
-          title: "দেশের শীর্ষস্থানীয় আইএসপি ও টেলিকম প্রতিষ্ঠানে নেটওয়ার্ক ইঞ্জিনিয়ার পদে ইন্টার্নশিপের সুযোগ",
+          title": "দেশের শীর্ষস্থানীয় আইএসপি ও টেলিকম প্রতিষ্ঠানে নেটওয়ার্ক ইঞ্জিনিয়ার পদে ইন্টার্নশিপের সুযোগ",
           cat: "Job Placement",
           reporter: "জব ডেস্ক",
           image: "",
@@ -1270,7 +1292,7 @@
           link: "#"
         },
         {
-          title: "পলিটেকনিক শিক্ষার্থীদের উদ্ভাবিত স্মার্ট ওয়াটার মনিটরিং সিস্টেম DrainSense জাতীয় পুরস্কারে ভূষিত",
+          title": "পলিটেকনিক শিক্ষার্থীদের উদ্ভাবিত স্মার্ট ওয়াটার মনিটরিং সিস্টেম DrainSense জাতীয় পুরস্কারে ভূষিত",
           cat: "Tech & Research",
           reporter: "উদ্ভাবন ডেস্ক",
           image: "",
@@ -1278,7 +1300,7 @@
           link: "#"
         },
         {
-          title: "ডুয়েট (DUET) ভর্তি প্রস্তুতি ও ইন্ডাস্ট্রিয়াল অ্যাটাচমেন্ট নির্বাচন নির্দেশিকা ২০২৬",
+          title": "ডুয়েট (DUET) ভর্তি প্রস্তুতি ও ইন্ডাস্ট্রিয়াল অ্যাটাচমেন্ট নির্বাচন নির্দেশিকা ২০২৬",
           cat: "Training",
           reporter: "ক্যারিয়ার ডেস্ক",
           image: "",
@@ -1286,7 +1308,7 @@
           link: "#"
         },
         {
-          title: "মাঠ পর্যায়ের টেস্ট: এক্সটার্নাল অ্যান্টেনাযুক্ত 4G LTE রাউটার বনাম সাধারণ ইনডোর রাউটার",
+          title": "মাঠ পর্যায়ের টেস্ট: এক্সটার্নাল অ্যান্টেনাযুক্ত 4G LTE রাউটার বনাম সাধারণ ইনডোর রাউটার",
           cat: "Tech & Research",
           reporter: "টেক ডেস্ক",
           image: "",
@@ -1294,7 +1316,7 @@
           link: "https://youtube.com"
         },
         {
-          title: "NSDA CBT&A লেভেল-৩ ও ৪ ট্রেইনার এবং অ্যাসেসর নিবন্ধন বিজ্ঞপ্তি",
+          title": "NSDA CBT&A লেভেল-৩ ও ৪ ট্রেইনার এবং অ্যাসেসর নিবন্ধন বিজ্ঞপ্তি",
           cat: "Training",
           reporter: "প্রশিক্ষণ ডেস্ক",
           image: "",
@@ -1302,7 +1324,7 @@
           link: "https://nsda.gov.bd"
         },
         {
-          title: "১০ম গ্রেড উপ-সহকারী প্রকৌশলী (SAE) নিয়োগ ও প্রাইভেট সেক্টরে জব সার্কুলার",
+          title": "১০ম গ্রেড উপ-সহকারী প্রকৌশলী (SAE) নিয়োগ ও প্রাইভেট সেক্টরে জব সার্কুলার",
           cat: "Job Placement",
           reporter: "জব প্লেসমেন্ট ডেস্ক",
           image: "",
@@ -1310,7 +1332,7 @@
           link: "#"
         },
         {
-          title: "ল্যাব আধুনিকায়ন ও বকেয়া বৃত্তির দাবিতে পলিটেকনিক শিক্ষার্থীদের ৬ দফা স্মারকলিপি পেশ",
+          title": "ল্যাব আধুনিকায়ন ও বকেয়া বৃত্তির দাবিতে পলিটেকনিক শিক্ষার্থীদের ৬ দফা স্মারকলিপি পেশ",
           cat: "Campus Politics",
           reporter: "ক্যাম্পাস ডেস্ক",
           image: "",
@@ -1318,7 +1340,7 @@
           link: "#"
         },
         {
-          title: "বিটিইবি ডিপ্লোমা-ইন-ইঞ্জিনিয়ারিং সেমিস্টার পরীক্ষার রুটিন ও ফরম ফিলাপের বিজ্ঞপ্তি প্রকাশ",
+          title": "বিটিইবি ডিপ্লোমা-ইন-ইঞ্জিনিয়ারিং সেমিস্টার পরীক্ষার রুটিন ও ফরম ফিলাপের বিজ্ঞপ্তি প্রকাশ",
           cat: "Notices",
           reporter: "নোটিশ ডেস্ক",
           image: "",
@@ -1333,6 +1355,26 @@
     let showExpandedGrid = false;
     let hasExclusiveVideos = false;
     let activeArticleTitle = '';
+
+    const CATEGORY_LABELS_BN = {
+      'ALL': 'সকল সংবাদ ও নোটিশ',
+      'Notices': 'নোটিশ',
+      'Training': 'প্রশিক্ষণ ও ডুয়েট',
+      'Job Placement': 'জব প্লেসমেন্ট',
+      'Campus Politics': 'ক্যাম্পাস',
+      'Tech & Research': 'প্রযুক্তি ও গবেষণা'
+    };
+
+    function normalizeCategory(rawCat) {
+      if (!rawCat) return '';
+      const val = String(rawCat).trim().toLowerCase();
+      if (val.includes('notice') || val.includes('নোটিশ')) return 'Notices';
+      if (val.includes('train') || val.includes('duet') || val.includes('প্রশিক্ষণ')) return 'Training';
+      if (val.includes('job') || val.includes('placement') || val.includes('জব')) return 'Job Placement';
+      if (val.includes('campus') || val.includes('politic') || val.includes('ক্যাম্পাস')) return 'Campus Politics';
+      if (val.includes('tech') || val.includes('research') || val.includes('প্রযুক্তি')) return 'Tech & Research';
+      return String(rawCat).trim();
+    }
 
     function setAutoEditorialDates() {
       try {
@@ -1439,21 +1481,34 @@
 
       return `
         <article class="news-card" onclick="openArticleById(${art._uid})">
-          <div>
-            ${mediaHtml}
-            <div class="card-content">
-              <div>
-                <h3 class="card-title">${art.title}</h3>
-                <p class="card-summary">${snippet}</p>
-              </div>
-              <div class="card-footer">
-                <span>${art.reporter || 'টিভেট ডেস্ক'} • ${getRelativeBanglaDate(art.date)}</span>
-                <span class="read-more-link">বিস্তারিত →</span>
-              </div>
+          ${mediaHtml}
+          <div class="card-content">
+            <div>
+              <h3 class="card-title">${art.title}</h3>
+              <p class="card-summary">${snippet}</p>
+            </div>
+            <div class="card-footer">
+              <span>${art.reporter || 'টিভেট ডেস্ক'} • ${getRelativeBanglaDate(art.date)}</span>
+              <span class="read-more-link">বিস্তারিত →</span>
             </div>
           </div>
         </article>
       `;
+    }
+
+    function getFilteredArticles() {
+      const q = document.getElementById('searchInput').value.toLowerCase().trim();
+      return allArticles.filter(a => {
+        const matchesCat = (currentFilter === 'ALL') || (normalizeCategory(a.cat) === currentFilter);
+        if (!matchesCat) return false;
+        if (!q) return true;
+        return (
+          (a.title && a.title.toLowerCase().includes(q)) ||
+          (a.summary && a.summary.toLowerCase().includes(q)) ||
+          (a.details && a.details.toLowerCase().includes(q)) ||
+          (a.reporter && a.reporter.toLowerCase().includes(q))
+        );
+      });
     }
 
     function renderArticles(list) {
@@ -1461,7 +1516,7 @@
       const loadMoreWrap = document.getElementById('loadMoreWrap');
 
       if (!list || list.length === 0) {
-        grid.innerHTML = '<p style="color:var(--text-muted);">এই বিভাগে কোনো সংবাদ পাওয়া যায়নি।</p>';
+        grid.innerHTML = '<p style="color:var(--text-muted); font-size:1.05rem;">এই বিভাগে কোনো সংবাদ পাওয়া যায়নি।</p>';
         loadMoreWrap.style.display = 'none';
         return;
       }
@@ -1481,10 +1536,7 @@
 
     function showAllGridItems() {
       showExpandedGrid = true;
-      const filtered = currentFilter === 'ALL'
-        ? allArticles
-        : allArticles.filter(a => a.cat === currentFilter);
-      renderArticles(filtered);
+      renderArticles(getFilteredArticles());
     }
 
     function renderLatestSidebar(list) {
@@ -1534,8 +1586,9 @@
 
       const heroGrid = document.getElementById('heroEditorialGrid');
       const exclusiveSection = document.getElementById('exclusiveVideosSection');
+      const q = document.getElementById('searchInput').value.trim();
 
-      if (cat === 'ALL') {
+      if (cat === 'ALL' && !q) {
         heroGrid.style.display = 'grid';
         if (hasExclusiveVideos) exclusiveSection.style.display = 'block';
       } else {
@@ -1551,15 +1604,12 @@
         window.history.replaceState(null, '', window.location.pathname);
       }
 
-      const filtered = cat === 'ALL'
-        ? allArticles
-        : allArticles.filter(a => a.cat === cat);
+      const baseLabel = CATEGORY_LABELS_BN[cat] || cat;
+      document.getElementById('gridHeading').textContent = q
+        ? `${baseLabel} — "${q}" অনুসন্ধানের ফলাফল`
+        : baseLabel;
 
-      document.getElementById('gridHeading').textContent = cat === 'ALL'
-        ? 'সকল সংবাদ ও নোটিশ'
-        : `${btnElement ? btnElement.textContent : cat}`;
-
-      renderArticles(filtered);
+      renderArticles(getFilteredArticles());
 
       if (cat !== 'ALL') {
         document.getElementById('allNewsSection').scrollIntoView({ behavior: 'smooth' });
@@ -1567,26 +1617,28 @@
     }
 
     function handleSearch() {
-      const q = document.getElementById('searchInput').value.toLowerCase().trim();
-      showExpandedGrid = true;
+      const q = document.getElementById('searchInput').value.trim();
+      showExpandedGrid = q.length > 0;
       document.getElementById('articleReaderWrapper').classList.remove('active');
       document.getElementById('portalHomeView').style.display = 'block';
 
+      const baseLabel = CATEGORY_LABELS_BN[currentFilter] || currentFilter;
+
       if (q.length > 0) {
         document.getElementById('heroEditorialGrid').style.display = 'none';
-        document.getElementById('gridHeading').textContent = `"${q}" অনুসন্ধানের ফলাফল`;
+        document.getElementById('exclusiveVideosSection').style.display = 'none';
+        document.getElementById('gridHeading').textContent = currentFilter === 'ALL'
+          ? `"${q}" অনুসন্ধানের ফলাফল`
+          : `${baseLabel} বিভাগে "${q}" অনুসন্ধানের ফলাফল`;
       } else if (currentFilter === 'ALL') {
-        showExpandedGrid = false;
         document.getElementById('heroEditorialGrid').style.display = 'grid';
-        document.getElementById('gridHeading').textContent = 'সকল সংবাদ ও নোটিশ';
+        if (hasExclusiveVideos) document.getElementById('exclusiveVideosSection').style.display = 'block';
+        document.getElementById('gridHeading').textContent = baseLabel;
+      } else {
+        document.getElementById('gridHeading').textContent = baseLabel;
       }
 
-      const filtered = allArticles.filter(a =>
-        (a.title && a.title.toLowerCase().includes(q)) ||
-        (a.summary && a.summary.toLowerCase().includes(q)) ||
-        (a.details && a.details.toLowerCase().includes(q))
-      );
-      renderArticles(filtered);
+      renderArticles(getFilteredArticles());
     }
 
     function toggleMobileMenu() {
@@ -1602,14 +1654,16 @@
     function openArticleById(uid) {
       const art = allArticles.find(a => a._uid === uid);
       if (!art) return;
-      activeArticleTitle = art.title;
+      activeArticleTitle = art.title || '';
 
       document.getElementById('portalHomeView').style.display = 'none';
       const readerWrapper = document.getElementById('articleReaderWrapper');
       readerWrapper.classList.add('active');
 
       document.getElementById('readerTitle').textContent = art.title;
-      document.getElementById('readerMeta').textContent = `${art.reporter || 'টিভেট ডেস্ক'} • ${getRelativeBanglaDate(art.date)}`;
+      const catLabel = CATEGORY_LABELS_BN[normalizeCategory(art.cat)] || '';
+      const metaParts = [catLabel, art.reporter || 'টিভেট ডেস্ক', getRelativeBanglaDate(art.date)].filter(Boolean);
+      document.getElementById('readerMeta').textContent = metaParts.join(' • ');
       document.getElementById('readerBody').textContent = art.details || art.summary || '';
 
       const readerImg = document.getElementById('readerImage');
@@ -1632,6 +1686,9 @@
       document.getElementById('readMoreGrid').innerHTML = relatedLatest.map(item => buildCardHtml(item)).join('');
 
       document.title = `${art.title} | TVET Tribune`;
+      document.getElementById('og-title').setAttribute('content', art.title);
+      document.getElementById('og-description').setAttribute('content', (art.details || art.summary || '').slice(0, 160));
+      if (art.image) document.getElementById('og-image').setAttribute('content', window.location.origin + art.image);
       if (window.location.protocol !== 'file:') {
         window.history.replaceState(null, '', `#news-${uid}`);
       }
@@ -1644,6 +1701,7 @@
       document.getElementById('portalHomeView').style.display = 'block';
       if (currentFilter === 'ALL' && document.getElementById('searchInput').value.trim() === '') {
         document.getElementById('heroEditorialGrid').style.display = 'grid';
+        if (hasExclusiveVideos) document.getElementById('exclusiveVideosSection').style.display = 'block';
       }
       document.title = 'TVET Tribune | কারিগরি ও প্রকৌশল শিক্ষার নির্ভরযোগ্য সংবাদমাধ্যম';
       if (window.location.protocol !== 'file:') {
@@ -1651,14 +1709,23 @@
       }
     }
 
+    // 4 Social Share Functions: All include the Specific News Headline + Direct Article Link
+    function getSharePayload() {
+      const url = window.location.href;
+      const title = activeArticleTitle || document.title;
+      return { url, title };
+    }
+
     function shareToFacebook() {
-      const shareUrl = encodeURIComponent(window.location.href);
-      window.open(`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`, '_blank', 'noopener,noreferrer,width=600,height=500');
+      const { url, title } = getSharePayload();
+      const encodedUrl = encodeURIComponent(url);
+      const encodedQuote = encodeURIComponent(`${title} — TVET Tribune`);
+      window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}&quote=${encodedQuote}`, '_blank', 'noopener,noreferrer,width=620,height=520');
     }
 
     function shareToMessenger() {
-      const rawUrl = window.location.href;
-      const encodedUrl = encodeURIComponent(rawUrl);
+      const { url, title } = getSharePayload();
+      const encodedUrl = encodeURIComponent(url);
       const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
       if (isMobile) {
         window.location.href = `fb-messenger://share/?link=${encodedUrl}`;
@@ -1668,26 +1735,26 @@
     }
 
     function shareToWhatsApp() {
-      const shareText = encodeURIComponent(`${activeArticleTitle ? activeArticleTitle + '\n' : ''}${window.location.href}`);
+      const { url, title } = getSharePayload();
+      const shareText = encodeURIComponent(`*${title}*\nবিস্তারিত পড়ুন: ${url}`);
       window.open(`https://api.whatsapp.com/send?text=${shareText}`, '_blank', 'noopener,noreferrer');
     }
 
     function copyShareLink() {
+      const { url, title } = getSharePayload();
+      const copyPayload = `${title}\n${url}`;
       if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(window.location.href).then(() => {
-          alert('সংবাদটির নিজস্ব লিংক কপি হয়েছে!');
+        navigator.clipboard.writeText(copyPayload).then(() => {
+          alert('সংবাদের শিরোনাম ও লিংক কপি হয়েছে!');
         });
       } else {
-        alert('লিংক: ' + window.location.href);
+        alert(copyPayload);
       }
     }
 
     window.addEventListener('resize', () => {
       if (!showExpandedGrid && allArticles.length > 0) {
-        const filtered = currentFilter === 'ALL'
-          ? allArticles
-          : allArticles.filter(a => a.cat === currentFilter);
-        renderArticles(filtered);
+        renderArticles(getFilteredArticles());
       }
     });
 
@@ -1719,12 +1786,16 @@
         ? safeData.articles
         : FALLBACK_PORTAL_DATA.articles;
 
-      allArticles = rawArticles.map((item, index) => ({ ...item, _uid: index + 1 })).reverse();
+      allArticles = rawArticles.map((item, index) => ({
+        ...item,
+        cat: normalizeCategory(item.cat),
+        _uid: index + 1
+      })).reverse();
 
       const tickerHeadlines = allArticles.slice(0, 5).map(a => `❖ ${a.title}`).join('   |   ');
       document.getElementById('breakingTicker').textContent = tickerHeadlines || 'টিভেট ট্রিবিউনে স্বাগতম';
 
-      renderArticles(allArticles);
+      renderArticles(getFilteredArticles());
       renderLatestSidebar(allArticles);
 
       const videos = (Array.isArray(safeData.exclusiveVideos) && safeData.exclusiveVideos.length > 0)
@@ -1740,10 +1811,8 @@
     }
 
     async function initPortal() {
-      // 1. Always render built-in fallback data immediately (works 100% offline via file://)
       applyPortalData(FALLBACK_PORTAL_DATA);
 
-      // 2. Only fetch external data.json when hosted over http/https (Netlify / GitHub Pages)
       if (window.location.protocol.startsWith('http')) {
         try {
           const res = await fetch(`data.json?v=${Date.now()}`);
