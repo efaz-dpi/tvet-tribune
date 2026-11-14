@@ -8,26 +8,6 @@
     "facebook": "https://facebook.com",
     "linkedin": "https://linkedin.com"
   },
-  "exclusiveVideos": [
-    {
-      "title": "মাঠ পর্যায়ের টেস্ট: এক্সটার্নাল অ্যান্টেনাযুক্ত 4G LTE রাউটার বনাম সাধারণ ইনডোর রাউটার",
-      "videoUrl": "https://www.youtube.com/watch?v=aqz-KE-bpKQ",
-      "date": "১৩ নভেম্বর ২০২৬",
-      "desk": "টেক ও গবেষণা ডেস্ক"
-    },
-    {
-      "title": "পলিটেকনিক শিক্ষার্থীদের উদ্ভাবিত স্মার্ট ওয়াটার মনিটরিং সিস্টেম DrainSense-এর লাইভ ডেমো",
-      "videoUrl": "https://www.youtube.com/watch?v=aqz-KE-bpKQ",
-      "date": "১১ নভেম্বর ২০২৬",
-      "desk": "উদ্ভাবন ডেস্ক"
-    },
-    {
-      "title": "ডুয়েট (DUET) ভর্তি প্রস্তুতি ও ইন্ডাস্ট্রিয়াল অ্যাটাচমেন্ট নির্বাচন নির্দেশিকা ২০২৬",
-      "videoUrl": "https://www.youtube.com/watch?v=aqz-KE-bpKQ",
-      "date": "০৯ নভেম্বর ২০২৬",
-      "desk": "ক্যারিয়ার ডেস্ক"
-    }
-  ],
   "ads": {
     "topBanner": {
       "active": true,
