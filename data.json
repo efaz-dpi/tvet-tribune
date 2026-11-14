@@ -13,12 +13,12 @@
   ],
   "ads": {
     "topBanner": {
-      "active": true,
+      "active": false,
       "text": "বিজ্ঞাপনের স্থান — আপনার প্রতিষ্ঠান বা টেক প্রোডাক্টের প্রচারের জন্য যোগাযোগ করুন (৭২৮ × ৯০ পিক্সেল)",
       "link": "#submit-news"
     },
     "sidebarBox": {
-      "active": true,
+      "active": false,
       "text": "DUET অ্যাডমিশন কোচিং, IT ট্রেনিং বা ইন্ডাস্ট্রিয়াল অ্যাটাচমেন্ট বিজ্ঞাপনের স্থান (৩০০ × ২৫০ পিক্সেল)",
       "link": "#submit-news"
     },
