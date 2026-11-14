@@ -13,8 +13,9 @@
   ],
   "ads": {
     "topBanner": {
-      "active": false,
+      "active": true,
       "text": "বিজ্ঞাপনের স্থান — আপনার প্রতিষ্ঠান বা টেক প্রোডাক্টের প্রচারের জন্য যোগাযোগ করুন (৭২৮ × ৯০ পিক্সেল)",
+      "image": "/images/Untitled design-2.png",
       "link": "#submit-news"
     },
     "sidebarBox": {
